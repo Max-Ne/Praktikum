@@ -51,6 +51,8 @@ f_1 = TF1("Linear Law","[0]+x*[1]")
 f_1.SetLineColor(kRed);
 f_1.SetLineStyle(1);
 
+print "Fit: param[0] = y-Abschn., param[1] = Steigung"
+print ""
 graph_1.Fit(f_1);
 
 leg = TLegend(.1,.7,.3,.9,"Photostrom");

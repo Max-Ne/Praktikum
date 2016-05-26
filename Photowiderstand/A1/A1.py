@@ -29,7 +29,9 @@ for i in range(len(filenames)):
 U_V = np.array(U_V)
 I_A = np.array(I_A)
 
+print "Spannungen: dunkel, 549nm, 647nm"
 print U_V
+print "Stromstaerken"
 print I_A
   
 mg = TMultiGraph();
@@ -65,8 +67,19 @@ f_r = TF1("Linear Law3","[0]+x*[1]")
 f_r.SetLineColor(kRed);
 f_r.SetLineStyle(1);
 
+print "----FITS----"
+print "param[0] = y-Abschn"
+print "param[1] = Steigung"
+print "------------"
+print ""
+
+print "1) ohne Licht"
 graph_dunkel.Fit(f_dunkel);
+print ""
+print "1) gruen"
 graph_gr.Fit(f_gr);
+print ""
+print "1) rot"
 graph_r.Fit(f_r);
 
 leg = TLegend(.1,.7,.3,.9,"Farben");

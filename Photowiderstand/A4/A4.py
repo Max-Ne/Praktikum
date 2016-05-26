@@ -62,7 +62,15 @@ f_end = TF1("Linear Law","[0]+x*[1]",0,8.5)
 f_end.SetLineColor(kBlue);
 f_end.SetLineStyle(2);
 
+print "FIT 1"
+print ""
+print "param[0] = y-value"
 graph_beg.Fit(f_beg);
+
+print "FIT 1"
+print ""
+print "param[0] = y-value"
+print "param[1] = slope"
 graph_end.Fit(f_end);
 
 
