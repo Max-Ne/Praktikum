@@ -1,0 +1,16 @@
+prep:
+
+baender
+    propagierende welle wird am periodischen potential gestreut
+    an den raendern der brioullin zonen entsteht konstruktive interferenz mit der rueckgestreuten welle
+    -> stehende wellen
+    -> zwei loesungen mit gleicher kinetischer aber unterschiedlicher potentieller energie
+    ausserdem:
+        gruppengeschwindigkeit der stehenden welle = 0
+    => baender modell
+    ueberlapp der wellenfunktionen
+generation / rekombination
+
+intensitaetsabh der leitfaehigkeit
+
+frequenzabh

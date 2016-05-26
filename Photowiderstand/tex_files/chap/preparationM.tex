@@ -1,0 +1,79 @@
+%Vorbereitung: Baendermodell, generation und rekombination von ladungstraegern, Intensitaetsabhaengigkeit der photoleitfaehigkeit, frequenzabhaengigkeit der photoleitfaehigkeit
+
+\subsection{Theoretischer Hintergrund}
+\subsubsection{Bändermodell}
+Die quantenmechanischen Energiezustände in einem Kristall lassen sich mit dem so genannten Bändermodell beschreiben.
+In einem konstanten Potential lassen sich Elektronen mit ebenen Wellen mit quadratischer Dispersionsrelation beschreiben. 
+Im periodischen Potential der im Gitter angeordneten Atomrümpfe interferieren die ebenen Wellen mit den am Potential gestreuten.
+Am Rande der Brioullin Zonen entsteht konstruktive Interferenz und es entstehen stehende Wellen. Für stehende Wellen gibt es zwei phasenverschobene Lösungen mit gleicher kinetischer Energie. Die Gesamtenergie ist für die beiden Lösungen unterschiedlich aufgrund von unterschiedlichen Aufenthaltswahrscheinlichkeiten im hohen bzw. niedrigen Potential.
+An den Rändern der Brillouin Zonen kommt es also zu Energiebereichen, in denen es keine Lösungen für die Wellenfunktion gibt.\\
+Außerdem ist die Gruppengeschwindigkeit einer stehenden Welle:
+$$v \propto \frac{\partial E}{\partial k_x} = 0$$
+die Steigung geht also am Zonenrand gegen $0$ und es entsteht das bekannte Bandzonenschema.
+
+
+\subsubsection{Ladungsträger}
+
+\subsubsection{Intensitätsabhängigkeit der Leitfähigkeit}
+Neben den durch thermische Anregungen entstandenen Ladungsträgern gibt es auch Elektron-Loch-Paare die durch Absorption von Licht erzeugt werden. Diese verhalten sich ähnlich der Gleichgewichtsladungsträger. \\
+Weiterhin gilt bei geringer Intensität I des Lichtes das Lambert-Beersche Gesetz mit dem Absorptionskoeffizienten k.
+$$I = I_0 \cdot e^{-k \cdot x} $$
+Bei dauerhafter Beleuchtung stellt sich ein Gleichgewicht ein, das abhängt von der mittleren Lebensdauer $\tau _{n,p}$ der Überschusselektronen bzw. -defektelektronen, der Intensität, dem Absorptionskoeffizienten und der Quantenausbeute $\beta$. Entsprechend folgt die Änderung der Leitfähigkeit.
+$$\Delta n_{st} = \beta \cdot k \cdot I \cdot \tau _n $$
+$$\Delta \sigma =e \cdot \beta \cdot k \cdot I \cdot (\mu _n \tau _n + \mu _p \tau _p)$$
+Hierbei ist die mittlere Lebensdauer auch von der Intensität abhängig, da die Anzahl der Rekombinationsprozesse mit zunehmenden Überschussladungsträgern steigt. Um das genauer zu betrachten werden zunächst neue Größen eingeführt. \\
+Die mittlere Lebensdauer $\tau$ eines Überschusselektronen ist gegeben durch
+$$\tau = (\sum _k q_{nk} \cdot \nu _{nk} \cdot p_k)^{-1} $$
+Hierbei ist $\nu _{nk}$ die mittlere Geschwindigkeitsdifferenz von Überschusselektronen und Löchern, $q_{nk}$ der Einfangquerschnitt eines Elektrons. Der Index k steht für die Sorte der Elektronen bzw. Löcher. Die Rekombinationsintensität ist dann gegeben durch die Mittelung der Einfangquerschnitte und Relativgeschwindigkeiten und Multiplikation mit der Überschusselektrondichte. 
+$$\overline{q_{nk} \cdot \nu _{nk}} \cdot p_k \cdot \Delta n = \frac{\Delta n}{\tau _{nk}} $$
+Hiermit könne nun zwei Spezialfälle des Einschalte- und Ausschaltevorgangs betrachtet werden. 
+\paragraph{Lineare Rekombination} liegt vor, wenn die Lichteinstrahlung praktisch nichts an der Anzahl der Defektelektronen ändert, wie es z.B. bei einem dotierten Halbleiter der Fall ist. Dann ist $p_k \approx const.$ und Rekombinationsintensität ist linear von $\Delta n$ abhängig. \\
+Die Kontinuitätsgleichung liefert dann folgende Differentialgleichung
+$$\frac{\mathrm{d}}{\mathrm{d} t} (\Delta n) = \beta \cdot k \cdot I - \frac{\Delta n}{\tau} $$
+deren Lösung für das Ein- und Ausschalten dazu führt, dass die Leitfähigkeit im Gleichgewicht linear mit der Intensität ansteigt:
+$$\Delta \sigma _{st} \propto I $$
+Die mittlere Lebensdauer $\tau _n$ ist in diesem Fall näherungsweise konstant.
+
+\paragraph{Quadratische Rekombination} hingegen beschreibt den anderen Grenzfall. Dabei wird angenommen, dass die Konzentration der Überschussladungsträger viel größer ist als im thermischen Gleichgewicht, $p \approx \Delta p = \Delta n$. Somit steigt die Rekombinationsintensität quadratisch mit $\Delta _n$. \\
+Die nun folgende Differentialgleichung 
+$$\frac{\mathrm{d}}{\mathrm{d} t} (\Delta n) = \beta \cdot k \cdot I - (\Delta n)^{2} \cdot \overline{q_{nk} \cdot \nu _{nk}} $$
+liefert für den stationären Fall eine Leitfähigkeit und eine Konzentration der Überschusselektronen proportional zur Wurzel der Intensität.
+$$\Delta \sigma _{st} \propto \sqrt{I} $$
+$$\Delta n_{st} = \sqrt{\frac{\beta \ k}{\overline{q_{nk} \cdot \nu _{nk}}} \cdot I}$$
+Die mittlere Lebensdauer ist nun abhängig von der Konzentration $\Delta n$ und somit im Ein- und Ausschaltvorgang zeitabhängig. \\
+Mit Blick auf Aufgabe 3 ist noch erwähnenswert, dass mit steigender Frequenz auch die Eindringtiefe k steigt. Dadurch steigt zwar nicht die Gesamtzahl der erzeugten Überschussladungsträger in einem gewissen Zeitintervall, nach obiger Beziehung aber Dichte der Überschusselektronen im Gleichgewicht. Als Folge steigt die Rekombinationsrate und die Leitfähigkeit sinkt. \\
+Deshalb nimmt ab einer gewissen Wellenlänge die Leitfähigkeit wieder ab.
+
+\subsubsection{Frequenzabhängigkeit der Photoleitfähigkeit}
+Mit Blick auf Aufgabe 4 wird hier der Fall untersucht, dass die Generationsrate $G_e$ mit einer Frequenz $\omega$ um eine konstanten Wert moduliert wird. Die Kontinuitätsgleichung lautet dann
+$$\frac{\mathrm{d} n_e}{\mathrm{d}t} = G_e - R_e$$
+Mit frequenzabhängigen Ansatz und Phasenverschiebung $\phi$
+$$ n_e (t) = n_0 + A \cdot e^{i \cdot (\omega t + \phi)} $$
+findet man
+$$\vert \Delta n(t) \vert = \frac{\Delta G \cdot \tau _e}{\sqrt{1 + \omega ^{2} \tau_e ^{2}}} $$
+sowie laut Vorbereitungsmappe
+$$\tan(\phi) = -\omega \tau _e $$
+
+\subsection{Aufgaben}
+Im Folgenden werden die einzelnen Aufgabenteile des Praktikums besprochen.
+\subsubsection{Strom-Spannungskennlinie}
+Die erste Aufgabe ist es die Strom-Spannungskennlinie bei Beleuchtung mit verschiedenen Wellenlängen zu messen. Es werden die Wellenlängen 647nm und 549nm untersucht, sowie bei Dunkelheit. \\
+Die Erwartung hierzu ist, dass es einen linearen Zusammenhang zwischen Strom und Spannung gibt. Da CdS ein Empfindlichkeitsmaximum im sichtbaren Sprektralbereich hat, wird die Steigung mit kleinerer Wellenlänge zunehmen.
+
+\subsubsection{Intensität}
+Die zweite Aufgabe ist es bei konstanter Spannung und Wellenlänge den Photostrom in Abhängigkeit der Bestrahlungsintensität zu messen. Letztere wird mit zwei Polarisationsfiltern eingestellt und ist proportional zu $\cos ^{2} (\Theta)$, wenn $\Theta$ der Winkel zwischen den Polarisationsachsen ist. \\
+Da es sich hier nicht um einen dotierten Halbleiter handelt, wird es vermutlich quadratische Rekombination sein und $\sigma \propto \sqrt{I}$ erwartet. Die Versuchsergebnisse werden genaueres liefern.
+
+\subsubsection{Frequenz}
+
+%warum nimmt strom zu kleinen und zu grossen wl ab?
+%bandluecke CdS
+
+\subsubsection{Lebensdauer}
+Schließlich wird die mittlere Lebensdauer der Elektronen bestimmt. Dazu wird analog zu obigem Kapitel eine Lichtquelle mit modulierter Intensität verwendet. \\
+Nachdem die Modulation überprüft wurde, wird die Amplitude des oszillierenden Photostroms gemessen. Die Lebensdauer wird dann graphisch bestimmt, indem in einem doppeltlogharithmischen Schaubild diese Amplitude über die Frequenz aufgetragen wird. Für den Zusammenhang gilt, was durch Berechnen des Logarithmus folgt:
+$$\log (\vert \Delta n(t) \vert) = \log (\Delta G \cdot \tau_e) - \frac{1}{2} \cdot \log (1 + \omega^{2} \tau^{2}) $$
+Für kleine Frequenzen ist das eine waagerechte Gerade, für große eine Gerade mit negativer Steigung. Der Schnittpunkt dieser beider Geraden der Grenzfälle ist genau bei
+$$\omega \cdot \tau = 1$$
+wodurch die mittlere Lebensdauer bestimmt wird. Statt der Elektronendichte wird die dazu proportionale Leitfähigkeit verwendet.
+
