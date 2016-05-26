@@ -103,7 +103,7 @@ graph_1.SetFillColor(0);
 leg.AddEntry(graph_1,"Messdaten");
 leg.AddEntry(f_beg,"lin. Fit 1");
 leg.AddEntry(f_end,"lin. Fit 2");
-leg.AddEntry(vertical,"Schnittpunkt","L");
+leg.AddEntry(vertical,"y = " + str(round(x,4)),"L");
 
 leg.Draw("Same");
 
