@@ -1,0 +1,25 @@
+Es wird nun die Lebensdauer der Elektronen bestimmt, indem eine sinusförmig modulierte Lichtquelle verwendet wird. \\
+Dazu wird die Halogenlampe ausgeschalten und eine blaue Leuchtdiode mit modulierter Instensität verwendet. Die Frequenz der Modulation kann in LabView eingestellt werden, sowie die Amplitude des variierenden Photostroms und die dazugehörige Phasenverschiebung abgelesen werden. Die eingestellt Frequenz wird mit einer weiteren Silizium-Photodiode und einem Oszilloskop nachgemessen und an einen Lock-In-Verstärker angeschlossen. Dieser misst dann über einen zu dem Photowiderstand in Serie geschalteten Widerstand den Photostrom. \\
+\\
+Wie im letzten Abschnitt der Vorbereitung erwähnt werden nun die Amplitude und die Frequenz in einem doppelt logarithmischen Graphen dargestellt und der Anfangs- bzw. Endbereich zur Berechnung von Regressionsgeraden verwendet. \\
+Abb. ?? zeigt die Messwerte und diese beiden Geraden. Zur Berechnung der horizontalen Gerade wurden die ersten vier Messpunkte verwendet, für die zweite Gerade die letzten sieben. Die beiden Geraden folgen der Gleichung $\log(A / \muA) = m \cdot log(\omega / Hz) + c$ mit den in Abb.?? angegebenen Parametern. \\
+
+\begin{figure}
+\includegraphics ...
+\caption{Logarithmus der Photostromamplitude über dem Logarithmus der Frequenz. Die beiden Endbereiche wurden linear gefittet. Der Schnittpunkt der beiden Geraden ist laut Vorbereitung bei $\omega \cdot \tau = 1$, woraus die mittlere Lebensdauer der Elektronen folgt.}
+\end{figure}
+
+
+\begin{figure}
+\caption{Parameter der Regressionsgeraden in den beiden Frequenzbereichen}
+\begin{tabular}{lcc}
+& niedrige Frequenzen & hohe Frequenzen \\ 
+\hline
+\hline
+m & 0 & \\
+c & & \\
+\end{tabular}
+\end{figure}
+
+Der Schnittpunkt liegt bei $log(\omega _{intersect.} / Hz) = ...$ bzw. $\omega _{intersect.} = Hz$, woraus nach Vorbereitung folgt:
+$$\tau = \frac{1}{\omega _{intersect.}} = ...$$
