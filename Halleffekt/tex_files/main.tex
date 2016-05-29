@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english, ngerman]{babel}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{chngcntr}
+\counterwithin{figure}{section}
+
+\usepackage{siunitx} %\si{ampere} or \SI{0.3}{\angstrom}
+%\sisetup{per-mode=fraction}
+%\sisetup{separate-untertainty=true}
+\usepackage[version=3]{mhchem}
+
+\usepackage[pdftex]{graphicx}
+
+\usepackage{pdfpages}
+
+\usepackage{listings}
+
+%put in deckblatt
+\begin{document}
+
+%\includepdf[pages={1}]{DECKBLATT_SS16.pdf} sensitive data, not in git repository
+
+\section{Vorbereitung}
+\input{./chap/preparation.tex}
+
+% in Vorbereitung
+%\section{Versuchsaufbau}
+%\input{./chap/assembly.tex}
+
+\section{Versuchsdurchführung}
+%\input{./chap/execution.tex}
+
+\section{Auswertung}
+%\input{./chap/evaluation.tex}
+
+%appendix: original messprotokoll
+
+\end{document}
