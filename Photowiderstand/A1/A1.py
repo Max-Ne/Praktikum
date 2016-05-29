@@ -33,12 +33,18 @@ print "Spannungen: dunkel, 549nm, 647nm"
 print U_V
 print "Stromstaerken"
 print I_A
-  
+
+errU = [0.1]*len(U_V[0])
+errI = [0.01]*len(I_A[0])
+
+#print errU
+
 mg = TMultiGraph();
 
-graph_dunkel = TGraphErrors(len(U_V[0]),U_V[0],I_A[0])
-graph_gr = TGraphErrors(len(U_V[1]),U_V[1],I_A[1])
-graph_r = TGraphErrors(len(U_V[2]),U_V[2],I_A[2])
+graph_dunkel = TGraphErrors(len(U_V[0]),np.array(U_V[0]),np.array(I_A[0]),np.array(errU),np.array(errI))
+graph_gr = TGraphErrors(len(U_V[1]),np.array(U_V[1]),np.array(I_A[1]),np.array(errU),np.array(errI))
+graph_r = TGraphErrors(len(U_V[2]),np.array(U_V[2]),np.array(I_A[2]),np.array(errU),np.array(errI))
+#graph_r = TGraphErrors(len(U_V[2]),U_V[2],I_A[2])
 mg.SetTitle("Strom-Spannungs-Kennlinien;U in V;I in mA")
 
 graph_dunkel.SetMarkerStyle(kOpenCircle)

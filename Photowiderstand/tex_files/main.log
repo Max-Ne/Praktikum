@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  22 MAY 2016 19:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  29 MAY 2016 13:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -336,6 +336,9 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+(/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2009/09/02 v1.0a change counter resetting
+)
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3names.sty
@@ -844,18 +847,18 @@ Package: listings 2013/08/26 1.5b (Carsten Heinz)
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
-LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
+LaTeX Font Info:    ... okay on input line 24.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
@@ -985,105 +988,93 @@ e
 \AtBeginShipoutBox=\box55
 \c@lstlisting=\count167
 \c__siunitx_mathsf_int=\count168
-LaTeX Font Info:    Try loading font information for U+msa on input line 21.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 21.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count169
 
-
-pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
-version <1.6>, but at most version <1.5> allowed
-<DECKBLATT_SS16.pdf, id=1, 597.55246pt x 845.19763pt>
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
- <use DECKBLATT_SS16.pdf>
-Package pdftex.def Info: DECKBLATT_SS16.pdf used on input line 23.
-(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-
-
-pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
-version <1.6>, but at most version <1.5> allowed
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
-<use DECKBLATT_SS16.pdf>
-Package pdftex.def Info: DECKBLATT_SS16.pdf used on input line 23.
-(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-
-
-pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
-version <1.6>, but at most version <1.5> allowed
-
-
-pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
-version <1.6>, but at most version <1.5> allowed
-<DECKBLATT_SS16.pdf, id=4, page=1, 597.55246pt x 845.19763pt>
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
-
-<use DECKBLATT_SS16.pdf, page 1>
-Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
-(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
- <use DECKBLATT_SS16.pdf, page 1>
-Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
-(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
-
-<use DECKBLATT_SS16.pdf, page 1>
-Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
-(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
- <use DECKBLATT_SS16.pdf, page 1>
-Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
-(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
-File: DECKBLATT_SS16.pdf Graphic file (type pdf)
-
-<use DECKBLATT_SS16.pdf, page 1>
-Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
-(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
- [1
-
- <./DECKBLATT_SS16.pdf>]
 (./chap/preparation.tex
 Overfull \hbox (1.51599pt too wide) in paragraph at lines 20--22
 \T1/cmr/m/n/10 der mitt-le-ren Le-bens-dau-er $\OML/cmm/m/it/10 ^^\[]$ \T1/cmr/
 m/n/10 der Über-schus-s-elek-tro-nen bzw. -defektelektronen,
  []
 
-[2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 Overfull \hbox (7.08875pt too wide) in paragraph at lines 30--32
  \T1/cmr/bx/n/10 Li-nea-re Re-kom-bi-na-ti-on[] \T1/cmr/m/n/10 liegt vor, wenn 
 die Licht-ein-strah-lung prak-tisch nichts
  []
 
-[3] [4]) [5] (./main.aux) ) 
+[2] [3]) (./chap/evaluation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 14--20
+
+ []
+
+[4] <../A1/A1.pdf, id=26, 569.12625pt x 387.4475pt>
+File: ../A1/A1.pdf Graphic file (type pdf)
+ <use ../A1/A1.pdf>
+Package pdftex.def Info: ../A1/A1.pdf used on input line 24.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+Overfull \hbox (4.60576pt too wide) in paragraph at lines 33--40
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+[5 <../A1/A1.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 52--58
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--58
+
+ []
+
+<../A4/A4_2fits.pdf, id=73, 569.12625pt x 387.4475pt>
+File: ../A4/A4_2fits.pdf Graphic file (type pdf)
+ <use ../A4/A4_2fits.pdf>
+Package pdftex.def Info: ../A4/A4_2fits.pdf used on input line 62.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+[6] [7 <../A4/A4_2fits.pdf, page is rotated 90 degrees>]) [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14126 strings out of 494935
- 274025 string characters out of 6178122
- 303455 words of memory out of 5000000
- 17140 multiletter control sequences out of 15000+600000
+ 14151 strings out of 494935
+ 274413 string characters out of 6178122
+ 304904 words of memory out of 5000000
+ 17156 multiletter control sequences out of 15000+600000
  11370 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 39i,18n,45p,10426b,433s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknapp
-en/ec/ecrm1000.600pk> </home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/
-ecbx1000.600pk> </home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx12
-00.600pk> </home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600
-pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (5 pages, 233611 bytes).
+ 39i,10n,39p,10426b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </
+home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/u
+buntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubuntuu
+ser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb>
+Output written on main.pdf (8 pages, 163942 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 92 compressed objects within 1 object stream
+ 329 PDF objects out of 1000 (max. 8388607)
+ 93 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

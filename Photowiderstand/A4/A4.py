@@ -40,10 +40,14 @@ print x
 print y
 print z
 
+errU = [0.1]*len(x[0])
+errI = [0.01]*len(y[0])
 
-graph_1 = TGraphErrors(len(x[0]),np.log(x[0]),np.log(y[0]))
-graph_beg = TGraphErrors(4,np.log(x[0][:4]),np.log(y[0][:4]))
-graph_end = TGraphErrors(7,np.log(x[0][-7:]),np.log(y[0][-7:]))
+
+
+graph_1 = TGraphErrors(len(x[0]),np.array(np.log(x[0])),np.array(np.log(y[0])))
+graph_beg = TGraphErrors(4,np.array(np.log(x[0][:4])),np.array(np.log(y[0][:4])))
+graph_end = TGraphErrors(7,np.array(np.log(x[0][-7:])),np.array(np.log(y[0][-7:])))
 graph_2 = TGraphErrors(len(x[0]),x[0],np.tan(z[0]))
 
 graph_1.SetMarkerStyle(kOpenCircle)
