@@ -47,9 +47,12 @@ graph_1.SetMarkerColor(kBlue)
 graph_1.SetLineColor(kBlue);
 #graph_1.SetMaximum(1.8)
 
-f_1 = TF1("Linear Law","[0]+x*[1]")
-f_1.SetLineColor(kBlack);
+f_1 = TF1("Exponential Law","[0]*x**[1]",0.,1)
+f_1.SetLineColor(kRed);
 f_1.SetLineStyle(1);
+
+f_1.SetParameter(0,np.exp(-0.664655))
+f_1.SetParameter(1,0.557359)
 
 #graph_1.Fit(f_1);
 
@@ -57,7 +60,7 @@ leg = TLegend(.1,.8,.3,.9,"Photostrom");
 leg.SetFillColor(0);
 graph_1.SetFillColor(0);
 leg.AddEntry(graph_1,"Messdaten");
-#leg.AddEntry(f_1,"Fit");
+leg.AddEntry(f_1,"Fit aus log-log Graph");
 
 
 c1 = TCanvas( 'c1', 'The Fit Canvas', 200, 10, 700, 500 )
@@ -65,7 +68,7 @@ c1.SetGrid()
 
 mg.Add(graph_1)
 mg.Draw("AP")
-
+f_1.Draw("SAME")
 
 leg.Draw("Same");
 

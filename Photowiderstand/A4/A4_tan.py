@@ -41,10 +41,11 @@ print y
 print z
 
 
-graph_1 = TGraphErrors(len(x[0]),np.log(x[0]),np.log(y[0]))
+#graph_1 = TGraphErrors(len(x[0]),np.log(x[0]),np.log(y[0]))
 graph_beg = TGraphErrors(4,np.log(x[0][:4]),np.log(y[0][:4]))
 graph_end = TGraphErrors(7,np.log(x[0][-7:]),np.log(y[0][-7:]))
-graph_2 = TGraphErrors(len(x[0]),x[0],(z[0]))
+graph_1 = TGraphErrors(len(x[0]),x[0],np.tan(z[0] /180 * np.pi))
+graph_end = TGraphErrors(14,x[0][-14:],np.tan(z[0][-14:] /180 * np.pi))
 
 graph_1.SetMarkerStyle(kOpenCircle)
 graph_1.SetMarkerColor(kBlack)
@@ -53,20 +54,24 @@ graph_1.SetLineColor(kBlack);
 
 #mg.GetXaxis().SetTitleOffset(0);
 
-f_beg = TF1("horiz.","[0]",0,8)
-f_beg.SetLineColor(kBlue);
-f_beg.SetLineStyle(2);
+#f_beg = TF1("horiz.","[0]",0,8)
+#f_beg.SetLineColor(kBlue);
+#f_beg.SetLineStyle(2);
 
 
 f_end = TF1("Linear Law","[0]+x*[1]",0,8.5)
 f_end.SetLineColor(kBlue);
 f_end.SetLineStyle(2);
 
+#f_2end = TF1("Linear Law","[0]+x*[1]",0,8.5)
+#f_2end.SetLineColor(kBlue);
+#f_2end.SetLineStyle(2);
+
 
 print "FIT 1"
 print ""
 print "param[0] = y-value"
-graph_beg.Fit(f_beg);
+#graph_beg.Fit(f_beg);
 
 print "FIT 1"
 print ""
@@ -86,10 +91,10 @@ mg.SetTitle("Amplitude #ddot{u}ber Frequenz;log (#omega / Hz);log (A / #muA)")
 
 #mg.GetXaxis().SetTitle("aaa");
 mg.Draw("AP")
-f_beg.Draw("SAME")
+#f_beg.Draw("SAME")
 f_end.Draw("SAME")
 c1.Update()
-
+"""
 x = (f_beg.GetParameter(0) - f_end.GetParameter(0))/(f_end.GetParameter(1))
 vertical = TLine (x,gPad.GetUymin(),x,gPad.GetUymax())
 vertical.SetLineColor(kRed)
@@ -97,23 +102,23 @@ vertical.SetLineStyle(1)
 vertical.SetLineWidth(2)
 vertical.Draw("SAME")
 c1.Update()
-
+"""
 leg = TLegend(.7,.7,.9,.9,"");
 leg.SetFillColor(0);
 graph_1.SetFillColor(0);
 leg.AddEntry(graph_1,"Messdaten");
-leg.AddEntry(f_beg,"lin. Fit 1");
+#leg.AddEntry(f_beg,"lin. Fit 1");
 leg.AddEntry(f_end,"lin. Fit 2");
-leg.AddEntry(vertical,"y = " + str(round(x,4)),"L");
+#leg.AddEntry(vertical,"y = " + str(round(x,4)),"L");
 
 leg.Draw("Same");
 
 c1.Update()
 
-c1.SaveAs("A4_2fits.pdf")
+#c1.SaveAs("A4_2fits.pdf")
 
 print "Intersect: ", x
-
+"""
 c2 = TCanvas( 'c1', 'The Fit Canvas', 200, 10, 700, 500 )
 c2.SetGrid()
 c2.cd()
@@ -128,10 +133,16 @@ f_2.SetParameter(1,-1.);
 f_2.SetParameter(2,0.);
 #f_2.SetParameter(3,0.);
 
-graph_2.Fit(f_2);
+#graph_2.Fit(f_2);
+graph_2end.Fit(f_2end);
+mg2 = TMultiGraph();
+mg2.Add(graph_2)
+mg2.Draw("AP")
 
-graph_2.Draw()
+f_2end.Draw("SAME")
 
+
+#f_2end.Draw("SAME");
 c2.Update()
-
+"""
 raw_input()
