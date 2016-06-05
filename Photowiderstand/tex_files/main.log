@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  5 JUN 2016 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  5 JUN 2016 16:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -911,21 +911,24 @@ File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
 File: listings.cfg 2015/06/04 1.6 listings configuration
 ))
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
- (./main.aux)
+
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
+LaTeX Font Info:    ... okay on input line 26.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
@@ -1011,7 +1014,7 @@ File: siunitx-abbreviations.cfg 2015/07/17 v2.6h siunitx: Abbreviated units
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 24.
+. Activating mapping `default' on line 26.
 .................................................
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1074,12 +1077,12 @@ e
 \AtBeginShipoutBox=\box55
 \c@lstlisting=\count213
 \c__siunitx_mathsf_int=\count214
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 26.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1100,12 +1103,23 @@ Overfull \hbox (7.08875pt too wide) in paragraph at lines 30--32
 die Licht-ein-strah-lung prak-tisch nichts
  []
 
-[2] [3]) (./chap/evaluation.tex
+[2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 73--75
+
+ []
+
+
+Overfull \hbox (0.62874pt too wide) in paragraph at lines 83--83
+[][]\T1/cmr/m/n/8 Lohninger, Hans: "Cad-mi-um-sul-fid", un-ter: an-or-ga-nik.ch
+emie.vias.org/cadmiumsulfid.html
+ []
+
+) (./chap/evaluation.tex
 Underfull \hbox (badness 10000) in paragraph at lines 6--12
 
  []
 
-[4] <../A1/A1.pdf, id=26, 569.12625pt x 387.4475pt>
+[4] <../A1/A1.pdf, id=29, 569.12625pt x 387.4475pt>
 File: ../A1/A1.pdf Graphic file (type pdf)
  <use ../A1/A1.pdf>
 Package pdftex.def Info: ../A1/A1.pdf used on input line 16.
@@ -1120,74 +1134,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--38
 
  []
 
-[5 <../A1/A1.pdf, page is rotated 90 degrees>]
-! Undefined control sequence.
-l.39 \floatbarrier
-                  
-? 
-<../A2/A2_log.pdf, id=73, 569.12625pt x 387.4475pt>
+[5] [6 <../A1/A1.pdf, page is rotated 90 degrees>] [7]
+<../A2/A2_log.pdf, id=83, 569.12625pt x 387.4475pt>
 File: ../A2/A2_log.pdf Graphic file (type pdf)
  <use ../A2/A2_log.pdf>
-Package pdftex.def Info: ../A2/A2_log.pdf used on input line 45.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+Package pdftex.def Info: ../A2/A2_log.pdf used on input line 52.
+(pdftex.def)             Requested size: 227.64647pt x 154.97624pt.
 
-! Undefined control sequence.
-l.49 \floatbarrier
-                  
-? 
-<../A3/A3.pdf, id=74, 569.12625pt x 387.4475pt>
+<../A2/A2_lin.pdf, id=84, 569.12625pt x 387.4475pt>
+File: ../A2/A2_lin.pdf Graphic file (type pdf)
+ <use ../A2/A2_lin.pdf>
+Package pdftex.def Info: ../A2/A2_lin.pdf used on input line 54.
+(pdftex.def)             Requested size: 227.64647pt x 154.97624pt.
+
+<../A3/A3.pdf, id=85, 569.12625pt x 387.4475pt>
 File: ../A3/A3.pdf Graphic file (type pdf)
  <use ../A3/A3.pdf>
-Package pdftex.def Info: ../A3/A3.pdf used on input line 56.
+Package pdftex.def Info: ../A3/A3.pdf used on input line 65.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-
-! Undefined control sequence.
-l.61 \floatbarrier
-                  
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+ [8 <../A2/A2_log.pdf, page is rotated 90 degrees> <../A2/A2_lin.pdf, page is r
+otated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+Underfull \hbox (badness 10000) in paragraph at lines 76--82
 
  []
 
-[6 <../A2/A2_log.pdf, page is rotated 90 degrees>]
-<../A4/A4_2fits.pdf, id=121, 569.12625pt x 387.4475pt>
+<../A4/A4_2fits.pdf, id=175, 569.12625pt x 387.4475pt>
 File: ../A4/A4_2fits.pdf Graphic file (type pdf)
 
 <use ../A4/A4_2fits.pdf>
-Package pdftex.def Info: ../A4/A4_2fits.pdf used on input line 77.
+Package pdftex.def Info: ../A4/A4_2fits.pdf used on input line 86.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- [7 <../A3/A3.pdf, page is rotated 90 degrees>]
-[8 <../A4/A4_2fits.pdf, page is rotated 90 degrees>]) [9] (./main.aux) ) 
+ [9 <../A3/A3.pdf, page is rotated 90 degrees>]
+[10 <../A4/A4_2fits.pdf, page is rotated 90 degrees>]) [11] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 16181 strings out of 493085
- 320272 string characters out of 6136917
- 360135 words of memory out of 5000000
- 19464 multiletter control sequences out of 15000+600000
- 11370 words of font info for 34 fonts, out of 8000000 for 9000
+ 16240 strings out of 493085
+ 321105 string characters out of 6136917
+ 361246 words of memory out of 5000000
+ 19507 multiletter control sequences out of 15000+600000
+ 18470 words of font info for 54 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,39p,10401b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/s
-hare/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.
-pfb>
-Output written on main.pdf (9 pages, 216067 bytes).
+ 42i,10n,39p,10401b,506s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr
+/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/t
+exmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/pub
+lic/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm060
+0.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/te
+xmf/fonts/type1/public/cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1000.pfb>
+Output written on main.pdf (11 pages, 275390 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 318 PDF objects out of 1000 (max. 8388607)
+ 159 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

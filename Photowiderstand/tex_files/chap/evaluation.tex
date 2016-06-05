@@ -37,19 +37,28 @@ Das qualitative Ergebnis dieser Messungen deckt sich mit unseren Erwartungen. Oh
 In Aufgabe 3 wird die Leitfähigkeit in Abhängigkeit der Wellenlänge genauer untersucht. Unter anderem steigt die Leitfähigkeit nicht zwangsläufig mit zunehmender Energie der Photonen. \\
 
 \FloatBarrier
+
 \subsection{Intensität}
-   %TODO root root fit
-\begin{figure}
-\label{A2_log}
+
+Die Intensitätskennlinien wurden für $5 \text{mV}$ und $ 549 \text{nm}$ Wellenlänge des eingestrahlten Lichts  aufgenommen. 
+Wie erwartet ergibt sich eine ungefähr Wurzelförmige Abhängigkeit mit dem linearen fit des doppelt logarithmischen Plots (\ref{fig:A2}):
+$$I = c \cdot (\cos^2(\Theta) )^{m}$$
+mit $c = (0.514451 \pm 0.002029) \text{mA} $ und $m = 0.557359 \pm 0.00334041$
+und damit quadratische Rekombination.
+
+\begin{figure}[hb]
+\label{fig:A2}
 \centering
-\includegraphics[scale=0.5]{../A2/A2_log.pdf}
-\caption{Photostrom über normierte Beleuchtugnsintensität}
+\includegraphics[scale=0.4]{../A2/A2_log.pdf}
+
+\includegraphics[scale=0.4]{../A2/A2_lin.pdf}
+
+\caption{Photostrom über normierte Beleuchtungsintensität}
 \end{figure}
 
 \FloatBarrier
 \subsection{Frequenz}
-Was gibts hier noch zu sagen?
-LOOK AT THIS GLORIOUS IMAGE OF PHOTOCURRENT
+
 \begin{figure}
 \label{A3}
 \centering
@@ -65,11 +74,11 @@ LOOK AT THIS GLORIOUS IMAGE OF PHOTOCURRENT
 % - Abb. Nummerierung überprüfen
 
 Es wird nun die Lebensdauer der Elektronen bestimmt, indem eine sinusförmig modulierte Lichtquelle verwendet wird. \\
-Dazu wird die Halogenlampe ausgeschalten und eine blaue Leuchtdiode mit modulierter Instensität verwendet. Die Frequenz der Modulation kann in LabView eingestellt werden, sowie die Amplitude des variierenden Photostroms und die dazugehörige Phasenverschiebung abgelesen werden. Die eingestellt Frequenz wird mit einer weiteren Silizium-Photodiode und einem Oszilloskop nachgemessen und an einen Lock-In-Verstärker angeschlossen. Dieser misst dann über einen zu dem Photowiderstand in Serie geschalteten Widerstand den Photostrom. \\
+Dazu wird die Halogenlampe ausgeschalten und eine blaue Leuchtdiode mit modulierter Instensität verwendet. Die Frequenz der Modulation kann in LabView eingestellt, sowie die Amplitude des variierenden Photostroms und die dazugehörige Phasenverschiebung abgelesen werden. Die eingestellt Frequenz wird mit einer weiteren Silizium-Photodiode und einem Oszilloskop nachgemessen und an einen Lock-In-Verstärker angeschlossen. Dieser misst dann über einen zu dem Photowiderstand in Serie geschalteten Widerstand den Photostrom. \\
 \\
 Wie im letzten Abschnitt der Vorbereitung erwähnt werden nun die Amplitude und die Frequenz in einem doppelt logarithmischen Graphen dargestellt und der Anfangs- bzw. Endbereich zur Berechnung von Regressionsgeraden verwendet. \\
 Abb. 4.3 zeigt die Messwerte und diese beiden Geraden graphisch dargestellt. Zur Berechnung der horizontalen Gerade wurden die ersten vier Messpunkte verwendet, für die zweite Gerade die letzten sieben. 
-Die beiden Geraden folgen der Gleichung $\mathrm{log} (A / \mu A) = m \cdot log(\omega / Hz) + c$ mit den in Abb. 4.4 angegebenen Parametern. \\
+Die beiden Geraden folgen der Gleichung $\mathrm{log} (A / \mu A) = m \cdot log(\omega / text{Hz}) + c$ mit den in Abb. 4.4 angegebenen Parametern. \\
 
 \begin{figure}
 \label{A4_reg}
@@ -93,9 +102,9 @@ c & $5.416 \pm 0.043$ & $8.833 \pm 0.116$ \\
 \end{figure}
 
 Der Schnittpunkt liegt bei 
-$$\log(\omega _{intersect.} / Hz) = 5.193 \pm 0.918$$
+$$\log(\omega _{intersect.} / \text{Hz}) = 5.193 \pm 0.918$$
 woraus nach Vorbereitung folgt:
-$$\omega = (180.009 \pm 165.009) Hz $$
+$$\omega = (180.009 \pm 165.009) \text{Hz} $$
 $$\tau = \frac{1}{\omega _{intersect.}} = (5.556 \pm 5.100) ms$$
 
 Auf den ersten Blick fällt die sehr hohe Messungenauigkeit der mittleren Lebensdauer $\tau$ auf. Der Grund dafür liegt darin, dass schon die kleinen Unsicherheiten der Regressionsgeraden durch Umkehren des Logarithmus große Auswirkungen haben. \\
