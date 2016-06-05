@@ -1,17 +1,24 @@
 \subsection{Theoretischer Hintergrund}
 \subsubsection{$\gamma$-Strahlung und Zerfall}
-Es gibt verschiedene Arten von Strahlung. Im Praktikum treten davon die $\gamma$-Strahlung, $\alpha$-Strahlung, $\beta^{+}$- und $\beta^{-}$-Strahlung, sowie Neutronenstrahlung auf. Für den Compton-Effekt ist die $\gamma$-Strahlung wichtig. \\
+Es gibt verschiedene Arten von Strahlung. Im Praktikum treten davon die EM-Strahlung, $\alpha$-Strahlung, $\beta^{+}$- und $\beta^{-}$-Strahlung, sowie Neutronenstrahlung auf. Für den Compton-Effekt ist die $\gamma$-Strahlung, ein Teil des elektromagnetischen Spektrums, wichtig. \\
 Sie entsteht beim Zerfall von Atomen, wenn die Tochterkerne danach in einem angeregten Zustand sind. Bei dem Übergang in den Grundzustand wird Energie in Form von Photonen abgestrahlt. Das ist die $\gamma$-Strahlung. \\
 Sie kann nach Kugelfächenfunktionen, den Multipolen, entwickelt werden. Der L-te Multipol hat die Parität $(-1)^{L}$ und durch den Zerfall bedingt haben die elektrischen und magnetischen Multipole $(-1)^{L}$ bzw. $(-1)^{L+1}$. Somit ist die Ordnung des magnetischen Anteils um eine Ordnung geringer als der zugehörige elektrische Anteil und wird nur dann wesentlich beobachtet, wenn letzterer durch Auswahlregeln verboten ist. \\
 Für den Drehimpuls gilt mit den Anfangs- und Endzuständen $J_i$ und $J_f$ die übliche Addition der Quantenmechanik:
-$$\vert J_f - J_i \vert \leq L \leq \vert J_f + J_i \vert $$
-
-
-\paragraph{innere Konversion} ???
+$$\vert J_f - J_i \vert \leq L \leq \vert J_f + J_i \vert $$ 
 
 \subsubsection{Wechselwirkung von Photonen mit Materie}
+Photonen wechselwirken durch unterschiedliche Effekte mit Atomen. Welcher Effekt dominiert, hängt von der Energie der Photonen und von der Kernladungszahl Z der Atome ab. Bei den einzelnen Effekten werden Photonen absorbiert oder gestreut. Die resultierende Intensität folgt einem Exponentialgesetz:
+$$I(d) = I(0) \cdot e^{-\mu \cdot d} $$
+Von ca. 100 keV bis 10 MeV tritt vornehmlich der Compton-Effekt auf, der hier genauer betrachtet wird. \\
+Dabei werden Photonen der Energie $E$ elastisch an einem Elektron der Energie $E_0$ gestreut. Dabei verlieren die Photonen Energie und werden abgelenkt, die Elektronen nehmen kinetische Energie auf. Mit Erhaltung des 4er-Impulses folgt die Energie der Photonen in Abhängigkeit des Polarwinkels und der Ruheenergie der Elektronen danach zu
+$$E' = \frac{E}{1 + \frac{E}{E_0} \cdot (1 - \cos \Theta)}$$
 
-\subsubsection{Detektor}
+\subsubsection{Wirkungsquerschnitt}
+Der Wirkungsquerschnitt $\sigma$ gibt an wie wahrscheinlich es ist, dass ein Teilchen mit einem Target interagiert. Er ist in Anlehnung an die Statistik definiert als
+$$\sigma = \frac{N_{int} \cdot F}{N_{ges} \cdot N_{targets}} $$
+mit der Anzahl der interagierenden Teilchen $N_{int}$, der Strahlfläche $F$, der Anzahl Strahlteilchen $N_{ges}$ und der Anzahl Targets $N_{targets}$. Somit hat er die Einheit einer Fläche und wird oft als eine solche bildlich veranschaulicht. Tatsächlich haben z.B. Billardkugeln die miteinander Stoßen ihren Querschnitt als Wirkungsquerschnitt. Bei anderen Prozessen ist er allerdings nicht so eindeutig. Bei der Rutherford Streuung nimmt er mit dem Abstand der Stoßpartner gemäß der elektromagnetischen Wechselwirkung ab. \\
+Gemessen wird oft nur der differentielle Wirkungsquerschnitt in Abhängigkeit des Raumwinkels und angenommen, dass er vom Azimutalwinkel $\Phi$ unabhängig ist. \\
+Für die Compton-Streuung gibt es eine theoretische Formel nach Klein und Nishina für ruhende, freie Elektronen.
 
 \subsubsection{Versuchsaufbau}
 
