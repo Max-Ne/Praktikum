@@ -6,9 +6,6 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-\usepackage{chngcntr}
-\counterwithin{figure}{section}
-
 \usepackage{siunitx} %\si{ampere} or \SI{0.3}{\angstrom}
 %\sisetup{per-mode=fraction}
 %\sisetup{separate-untertainty=true}
@@ -18,26 +15,19 @@
 
 \usepackage{pdfpages}
 
-\usepackage{listings}
-
-\usepackage{placeins}%provides \FloatBarrier
 
 %put in deckblatt
 \begin{document}
 
-%\includepdf[pages={1}]{DECKBLATT_SS16.pdf} sensitive data, not in git repository
+\includepdf[pages={1}]{DECKBLATT_SS16.pdf}
 
-\section{Vorbereitung}
-\input{./chap/preparation.tex}
+\section[]{Vorbereitung}
 
-\section{Versuchsaufbau}
-%\input{./chap/assembly.tex}
+\section[]{Versuchsaufbau}
 
-\section{Versuchsdurchführung}
-%\input{./chap/execution.tex}
+\section[]{Versuchsdurchführung}
 
-\section{Auswertung}
-\input{./chap/evaluation.tex}
+\section[]{Auswertung}
 
 %appendix: original messprotokoll
 

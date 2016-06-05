@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  5 JUN 2016 14:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  19 MAY 2016 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -339,9 +339,6 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
-Package: chngcntr 2009/09/02 v1.0a change counter resetting
-)
 (/usr/share/texlive/texmf-dist/tex/latex/siunitx/siunitx.sty
 (/usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 Package: expl3 2015/06/15 v5630 L3 programming layer (loader) 
@@ -914,18 +911,18 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 21.
+LaTeX Font Info:    ... okay on input line 21.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
@@ -1011,7 +1008,7 @@ File: siunitx-abbreviations.cfg 2015/07/17 v2.6h siunitx: Abbreviated units
 .................................................
 . chemgreek info: "mapping-activated"
 . 
-. Activating mapping `default' on line 24.
+. Activating mapping `default' on line 21.
 .................................................
 
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -1074,120 +1071,85 @@ e
 \AtBeginShipoutBox=\box55
 \c@lstlisting=\count213
 \c__siunitx_mathsf_int=\count214
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 21.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count215
 
-(./chap/preparation.tex
-Overfull \hbox (1.51599pt too wide) in paragraph at lines 20--22
-\T1/cmr/m/n/10 der mitt-le-ren Le-bens-dau-er $\OML/cmm/m/it/10 ^^\[]$ \T1/cmr/
-m/n/10 der Über-schus-s-elek-tro-nen bzw. -defektelektronen,
- []
 
-[1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (7.08875pt too wide) in paragraph at lines 30--32
- \T1/cmr/bx/n/10 Li-nea-re Re-kom-bi-na-ti-on[] \T1/cmr/m/n/10 liegt vor, wenn 
-die Licht-ein-strah-lung prak-tisch nichts
- []
-
-[2] [3]) (./chap/evaluation.tex
-Underfull \hbox (badness 10000) in paragraph at lines 6--12
-
- []
-
-[4] <../A1/A1.pdf, id=26, 569.12625pt x 387.4475pt>
-File: ../A1/A1.pdf Graphic file (type pdf)
- <use ../A1/A1.pdf>
-Package pdftex.def Info: ../A1/A1.pdf used on input line 16.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-
-Overfull \hbox (4.60576pt too wide) in paragraph at lines 25--32
- [][] 
- []
+pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
+<DECKBLATT_SS16.pdf, id=1, 597.55246pt x 845.19763pt>
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
+ <use DECKBLATT_SS16.pdf>
+Package pdftex.def Info: DECKBLATT_SS16.pdf used on input line 23.
+(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 35--38
-
- []
-
-[5 <../A1/A1.pdf, page is rotated 90 degrees>]
-! Undefined control sequence.
-l.39 \floatbarrier
-                  
-? 
-<../A2/A2_log.pdf, id=73, 569.12625pt x 387.4475pt>
-File: ../A2/A2_log.pdf Graphic file (type pdf)
- <use ../A2/A2_log.pdf>
-Package pdftex.def Info: ../A2/A2_log.pdf used on input line 45.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-
-! Undefined control sequence.
-l.49 \floatbarrier
-                  
-? 
-<../A3/A3.pdf, id=74, 569.12625pt x 387.4475pt>
-File: ../A3/A3.pdf Graphic file (type pdf)
- <use ../A3/A3.pdf>
-Package pdftex.def Info: ../A3/A3.pdf used on input line 56.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-
-! Undefined control sequence.
-l.61 \floatbarrier
-                  
-? 
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
-
- []
+pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
+<use DECKBLATT_SS16.pdf>
+Package pdftex.def Info: DECKBLATT_SS16.pdf used on input line 23.
+(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 67--73
+pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
 
- []
 
-[6 <../A2/A2_log.pdf, page is rotated 90 degrees>]
-<../A4/A4_2fits.pdf, id=121, 569.12625pt x 387.4475pt>
-File: ../A4/A4_2fits.pdf Graphic file (type pdf)
+pdfTeX warning: pdflatex (file ./DECKBLATT_SS16.pdf): PDF inclusion: found PDF 
+version <1.6>, but at most version <1.5> allowed
+<DECKBLATT_SS16.pdf, id=4, page=1, 597.55246pt x 845.19763pt>
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
 
-<use ../A4/A4_2fits.pdf>
-Package pdftex.def Info: ../A4/A4_2fits.pdf used on input line 77.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- [7 <../A3/A3.pdf, page is rotated 90 degrees>]
-[8 <../A4/A4_2fits.pdf, page is rotated 90 degrees>]) [9] (./main.aux) ) 
+<use DECKBLATT_SS16.pdf, page 1>
+Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
+(pdftex.def)             Requested size: 597.551pt x 845.19557pt.
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
+ <use DECKBLATT_SS16.pdf, page 1>
+Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
+(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
+
+<use DECKBLATT_SS16.pdf, page 1>
+Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
+(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
+ <use DECKBLATT_SS16.pdf, page 1>
+Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
+(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
+File: DECKBLATT_SS16.pdf Graphic file (type pdf)
+
+<use DECKBLATT_SS16.pdf, page 1>
+Package pdftex.def Info: DECKBLATT_SS16.pdf, page1 used on input line 23.
+(pdftex.def)             Requested size: 562.1644pt x 795.14362pt.
+ [1
+
+ <./DECKBLATT_SS16.pdf>] [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+ (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 16181 strings out of 493085
- 320272 string characters out of 6136917
- 360135 words of memory out of 5000000
- 19464 multiletter control sequences out of 15000+600000
- 11370 words of font info for 34 fonts, out of 8000000 for 9000
+ 16132 strings out of 493085
+ 319567 string characters out of 6136917
+ 354653 words of memory out of 5000000
+ 19435 multiletter control sequences out of 15000+600000
+ 9054 words of font info for 31 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,39p,10401b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/s
-hare/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/publi
-c/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.
-pfb>
-Output written on main.pdf (9 pages, 216067 bytes).
+ 42i,18n,43p,10401b,435s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr
+/share/texmf/fonts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/t
+ype1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (2 pages, 133823 bytes).
 PDF statistics:
- 256 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
+ 87 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
