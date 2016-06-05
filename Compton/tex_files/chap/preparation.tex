@@ -1,25 +1,40 @@
-\subsection{Theoretischer Hintergrund}
-\subsubsection{$\gamma$-Strahlung und Zerfall}
-Es gibt verschiedene Arten von Strahlung. Im Praktikum treten davon die EM-Strahlung, $\alpha$-Strahlung, $\beta^{+}$- und $\beta^{-}$-Strahlung, sowie Neutronenstrahlung auf. Für den Compton-Effekt ist die $\gamma$-Strahlung, ein Teil des elektromagnetischen Spektrums, wichtig. \\
-Sie entsteht beim Zerfall von Atomen, wenn die Tochterkerne danach in einem angeregten Zustand sind. Bei dem Übergang in den Grundzustand wird Energie in Form von Photonen abgestrahlt. Das ist die $\gamma$-Strahlung. \\
-Sie kann nach Kugelfächenfunktionen, den Multipolen, entwickelt werden. Der L-te Multipol hat die Parität $(-1)^{L}$ und durch den Zerfall bedingt haben die elektrischen und magnetischen Multipole $(-1)^{L}$ bzw. $(-1)^{L+1}$. Somit ist die Ordnung des magnetischen Anteils um eine Ordnung geringer als der zugehörige elektrische Anteil und wird nur dann wesentlich beobachtet, wenn letzterer durch Auswahlregeln verboten ist. \\
-Für den Drehimpuls gilt mit den Anfangs- und Endzuständen $J_i$ und $J_f$ die übliche Addition der Quantenmechanik:
+\subsection{Theoretical Background}
+\subsubsection{$\gamma$-Radiation and Decay}
+There are different kinds of radiation. In the experiments there are EM-radiation, $\alpha$-radiation, $\beta^{+}$- and $\beta^{-}$-radiation as well as radiation of neutrons. Important for compton scattering is the  $\gamma$-radiation, a part of the electro magnetic spectrum.\\
+It is emitted when atoms decay and the new atom is in an excited state. Photons are emitted as the atom relaxes to the ground state.\\
+The $\gamma$-radiation can be expanded in multipoles, i.e. a sum of spherical harmonics. The parity of the L-th multipole is$(-1)^{L}$. Induced by the decay the electric and magnetic part has the parity $(-1)^{L}$ resp. $(-1)^{L+1}$. Hence, the order of the magnetic part is higher by 1 than the electric, so that mainly the electric part is observed. \\
+The standard rule to add two angular momentums in QM gives for the initial state $J_i$ and the final state $J_f$ of the relaxing atom:
 $$\vert J_f - J_i \vert \leq L \leq \vert J_f + J_i \vert $$ 
 
-\subsubsection{Wechselwirkung von Photonen mit Materie}
-Photonen wechselwirken durch unterschiedliche Effekte mit Atomen. Welcher Effekt dominiert, hängt von der Energie der Photonen und von der Kernladungszahl Z der Atome ab. Bei den einzelnen Effekten werden Photonen absorbiert oder gestreut. Die resultierende Intensität folgt einem Exponentialgesetz:
+\subsubsection{Interaction of Photons with Matter}
+There are different effects that play a role when photons interact with matter. Which effect is dominant depends on the energy of the photon as well as the atomic number Z. All effects have in common that the photon is either absorbed or scattered, so that there are less photons after the interaction with matter in the initial direction. The intensity follows an exponential law:
 $$I(d) = I(0) \cdot e^{-\mu \cdot d} $$
-Von ca. 100 keV bis 10 MeV tritt vornehmlich der Compton-Effekt auf, der hier genauer betrachtet wird. \\
-Dabei werden Photonen der Energie $E$ elastisch an einem Elektron der Energie $E_0$ gestreut. Dabei verlieren die Photonen Energie und werden abgelenkt, die Elektronen nehmen kinetische Energie auf. Mit Erhaltung des 4er-Impulses folgt die Energie der Photonen in Abhängigkeit des Polarwinkels und der Ruheenergie der Elektronen danach zu
+Compton scattering dominantes starting by about ~100 keV up to 10 MeV. \\
+Photons with the energy $E$ are scattered inelasticly with a charged particle with the energy $E_0$. The photon loses some energy and changes its direction, the electron's kinetic energy increases. Conservation of 4-momentum gives the energy of the scattered photon as a function of the initial energy $E$ and the polar angle $\Theta$:
 $$E' = \frac{E}{1 + \frac{E}{E_0} \cdot (1 - \cos \Theta)}$$
 
-\subsubsection{Wirkungsquerschnitt}
-Der Wirkungsquerschnitt $\sigma$ gibt an wie wahrscheinlich es ist, dass ein Teilchen mit einem Target interagiert. Er ist in Anlehnung an die Statistik definiert als
-$$\sigma = \frac{N_{int} \cdot F}{N_{ges} \cdot N_{targets}} $$
-mit der Anzahl der interagierenden Teilchen $N_{int}$, der Strahlfläche $F$, der Anzahl Strahlteilchen $N_{ges}$ und der Anzahl Targets $N_{targets}$. Somit hat er die Einheit einer Fläche und wird oft als eine solche bildlich veranschaulicht. Tatsächlich haben z.B. Billardkugeln die miteinander Stoßen ihren Querschnitt als Wirkungsquerschnitt. Bei anderen Prozessen ist er allerdings nicht so eindeutig. Bei der Rutherford Streuung nimmt er mit dem Abstand der Stoßpartner gemäß der elektromagnetischen Wechselwirkung ab. \\
-Gemessen wird oft nur der differentielle Wirkungsquerschnitt in Abhängigkeit des Raumwinkels und angenommen, dass er vom Azimutalwinkel $\Phi$ unabhängig ist. \\
-Für die Compton-Streuung gibt es eine theoretische Formel nach Klein und Nishina für ruhende, freie Elektronen.
+\subsubsection{Cross Section}
+The cross section $\sigma$ gives the probability of a particle to interact with a target. Referring to some statics it is defined as:
+$$\sigma = \frac{N_{int} \cdot F}{N_{all} \cdot N_{targets}} $$
+with the number of interacting particles $N_{int}$, the cross section the beam $F$, the total number of particles in the beam $N_{all}$ and the number of targets $N_{targets}$. It has the same unit as a plane and is often visualized as such. In fact the cross section of two colliding billiard balls is just there geometric cross section. In other cases the cross section decreases with the distance of the two objects, e.g. Rutherford Scattering which depends on the electromagnetic interaction.\\
+The differential cross section with respect to the solid angle $\Omega$ is often used and it is assumed to be independent of the azimuthal angle $\Phi$.\\
+There is a theoretical formular by Klein and Nishina for the cross section of compton scattering.
 
-\subsubsection{Versuchsaufbau}
+\subsubsection{Experimental Setup}
+Monoenergetic $\gamma$-radiation is emitted by a $^{137}$Cs source. The target is a cylindric Al-target. The detector is made of NaJ and can be moved on a circle around the target. \\
+We will measure the energy and the number of the photons after the scattering as a function of the polar angle $\Theta$. This is because we assume rotational symmetry.
 
-\subsubsection{Aufgaben}
+\subsubsection{Ex.1}
+We meassure the differential cross section with respect to the solid angle. Therefor we use the detector and measure the number on incoming photons. For evaluating we use following formular:
+$$\frac{d\sigma}{d\Omega} = \frac{R(\Delta \Omega)}{\Delta \Omega} \cdot \frac{1}{\Phi _0 n} \cdot \frac{1}{\epsilon} $$
+In this formular $\frac{R(\Delta \Omega)}{\Delta \Omega}$ is a approximation of detector surface because it is not a small dot. $R(\Delta \Omega)$ is the photon stream, the number of detected photons per time interval. We also devide by $\Phi _0$ the incoming photon stream. $\frac{1}{\epsilon}$ is a given number to desribe the not detected electrons and finally $n$ is the number of electrons in the target, which follows from the cylindric geometry, the desity and the atomic number:
+$$n =  \frac{L}{A} \cdot Z \rho \pi (\frac{d}{2})^{2} \cdot l $$
+
+\subsubsection{Ex.2}
+In exercise 2 we meassure the energy of the photons after the scattering as a function of the angle $\Theta$ and the initial energy. \\
+First, we must gauge the system with known sources. Then we make the meassurement and use the formular above in a slightly different way. A linear regression gives us the invariant mass of electrons.
+$$\frac{1}{E'} = \frac{1}{E} + \frac{1}{m_0 \cdot c^{2}} \cdot (1 - \cos \Theta) $$
+
+\subsubsection{Ex.3}
+The formular above gives the differential cross section for a single electron. For the whole atom it should be proportional to the atomic number, given that the photon energy is large with respect to the binding energy. With this assumption and the above equations from Ex.1 we can write
+$$(\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega})_e = const. \cdot R \frac{A}{\rho Z} $$
