@@ -6,9 +6,6 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 
-\usepackage{chngcntr}
-\counterwithin{figure}{section}
-
 \usepackage{siunitx} %\si{ampere} or \SI{0.3}{\angstrom}
 %\sisetup{per-mode=fraction}
 %\sisetup{separate-untertainty=true}
@@ -25,13 +22,12 @@
 %put in deckblatt
 \begin{document}
 
-%\includepdf[pages={1}]{DECKBLATT_SS16.pdf} sensitive data, not in git repository
+\includepdf[pages={1}]{DECKBLATT_SS16.pdf}
 
 \section{Vorbereitung}
-\input{./chap/preparation.tex}
+%\input{./chap/preparation.tex}
 
-% in Vorbereitung
-%\section{Versuchsaufbau}
+\section{Versuchsaufbau}
 %\input{./chap/assembly.tex}
 
 \section{Versuchsdurchführung}
@@ -41,5 +37,7 @@
 %\input{./chap/evaluation.tex}
 
 %appendix: original messprotokoll
+\Appendix
+\section{Messprotokoll}
 
 \end{document}
