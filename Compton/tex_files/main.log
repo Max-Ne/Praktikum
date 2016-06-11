@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  5 JUN 2016 14:58
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  5 JUN 2016 22:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1000,32 +1000,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \c__siunitx_mathtt_int=\count169
 
-(./chap/preparation.tex) [1
+(./chap/preparation.tex
+Overfull \hbox (0.67223pt too wide) in paragraph at lines 3--7
+\T1/cmr/m/n/10 There are dif-fe-rent kinds of ra-dia-ti-on. In the ex-pe-ri-men
+ts the-re are EM-radiation,
+ []
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./main.aux) ) 
+[1
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) [3] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14132 strings out of 494935
- 274137 string characters out of 6178122
- 301864 words of memory out of 5000000
- 17144 multiletter control sequences out of 15000+600000
+ 14136 strings out of 494935
+ 274189 string characters out of 6178122
+ 302864 words of memory out of 5000000
+ 17148 multiletter control sequences out of 15000+600000
  11370 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 39i,6n,39p,10426b,416s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/ubun
-tuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/ubuntuuser
-/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubuntuuser/.texm
-f-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/.texmf-var/
-fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b>
-Output written on main.pdf (1 page, 84347 bytes).
+ 39i,6n,39p,10426b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </
+home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/u
+buntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubuntuu
+ser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/.t
+exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
+fb>
+Output written on main.pdf (3 pages, 107048 bytes).
 PDF statistics:
- 172 PDF objects out of 1000 (max. 8388607)
- 38 compressed objects within 1 object stream
+ 179 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
