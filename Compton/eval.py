@@ -4,14 +4,14 @@ import numpy as np
 gROOT.Reset()
 
 #####################
-# VALUES FOR CALCULATION
+# VALUES FOR CALIBRATION
 #####################
 
-d = 2.55 					# Durchmesser Kristall, cm
-r = 21.5 					# Abstand Target Kristall, cm
+d = 2.55 					# Diameter crystal, cm
+r = 21.5 					# Distance Target crystal, cm
 
-Z_AL = 13. 					# Ordnungszahl
-L = 6.022140857 * (10**23)	 		# mol**(-1) - Avogadro-Konstante
+Z_AL = 13. 					# Atomic number of aluminium
+L = 6.022140857 * (10**23)	 		# mol**(-1) - Avogadro-constant
 A_AL = 26.9815385 				# u
 rho_AL = 2.70					# g/cm**3 (20 Celsius)
 d_target = 1.					# cm
@@ -24,7 +24,7 @@ eps_inv = 2.08					# 1
 eps_inv_err = 0.01				# 1
 T_Half = 30.					# a
 
-t = 300.					# s, Messzeit
+t = 300.					# s, time of meassurement
 
 Delta_Omega = np.pi * (d/2)*(d/2) / (r*r)	# 1
 

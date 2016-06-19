@@ -66,15 +66,65 @@ print R
 print R_err
 
 #desities, atomic weights, atomic numbers
-rho = np.array([2.70,8.92,7.874,11.342])
-at_weight = np.array([26.9815385,63.546,55.845,207.2])
-at_number = np.array([13,29,26,82])
+rho = np.array([2.70,8.92,7.874,11.342])			#g/cm**3
+at_weight = np.array([26.9815385,63.546,55.845,207.2])		#u
+at_number = np.array([13.,29.,26.,82.])				#1
 
 #dif xsec propto
 dif_xsec = R * at_weight / rho / at_number
 dif_xsec_err = dif_xsec / R * R_err
 
-print dif_xsec
-print dif_xsec_err
+dif_xsec_wo_Z = R * at_weight / rho
+dif_xsec_wo_Z_err = R_err * at_weight / rho
 
+"""
+g_lin = TGraphErrors(len(R), at_number, dif_xsec_wo_Z, np.zeros(at_number.shape), dif_xsec_wo_Z_err)
+g_lin.SetMarkerStyle(kOpenCircle)
+g_lin.SetMarkerColor(kBlue)
+g_lin.SetLineColor(kBlue);
+
+c1 = TCanvas( 'c1', 'The Fit Canvas', 200, 10, 700, 500 )
+c1.SetGrid()
+
+g_lin.Draw("AP")
+c1.Update()
+"""
+g_part = TGraphErrors(len(R)-1, at_number[:-1], dif_xsec[:-1], np.zeros(at_number[:-1].shape), dif_xsec_err[:-1])
+fit_f = TF1("ho","[0]",0,90)
+fit_f.SetLineColor(kRed);
+fit_f.SetLineStyle(1);
+
+g_part.Fit(fit_f)
+
+g_ho = TGraphErrors(len(R), at_number, dif_xsec, np.zeros(at_number.shape), dif_xsec_err)
+g_ho.SetMarkerStyle(kOpenCircle)
+g_ho.SetMarkerColor(kBlue)
+g_ho.SetLineColor(kBlue);
+
+g_ho.SetMinimum(0.)
+
+g_ho.SetTitle("Different Atomic Numbers; atomic number; #frac{RA}{#rho Z}")
+g_ho.GetYaxis().SetNdivisions(504)
+
+c2 = TCanvas( 'c2', 'The Fit Canvas', 200, 10, 700, 500 )
+c2.SetGrid()
+c2.cd()
+
+leg = TLegend(.1,.1,.3,.2,"");
+leg.SetFillColor(0);
+g_ho.SetFillColor(0);
+fit_f.SetFillColor(0);
+leg.AddEntry(g_ho,"data points");
+leg.AddEntry(fit_f,"fit of first 3 points");
+
+
+
+g_ho.Draw("AP")
+fit_f.Draw("SAME")
+leg.Draw("SAME")
+c2.Update()
+
+c2.SaveAs("./plots/part_c.pdf")
+
+raw_input()
 
