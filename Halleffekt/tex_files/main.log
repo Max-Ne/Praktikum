@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  19 JUN 2016 19:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  19 JUN 2016 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1149,39 +1149,47 @@ age is rotated 90 degrees>]
 <../data/A2ex.pdf, id=127, 569.12625pt x 387.4475pt>
 File: ../data/A2ex.pdf Graphic file (type pdf)
  <use ../data/A2ex.pdf>
-Package pdftex.def Info: ../data/A2ex.pdf used on input line 44.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+Package pdftex.def Info: ../data/A2ex.pdf used on input line 43.
+(pdftex.def)             Requested size: 199.19717pt x 135.60864pt.
 
 <../data/A2in.pdf, id=128, 569.12625pt x 387.4475pt>
 File: ../data/A2in.pdf Graphic file (type pdf)
  <use ../data/A2in.pdf>
-Package pdftex.def Info: ../data/A2in.pdf used on input line 51.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+Package pdftex.def Info: ../data/A2in.pdf used on input line 50.
+(pdftex.def)             Requested size: 199.19717pt x 135.60864pt.
 
-[8] [9 <../data/A2ex.pdf, page is rotated 90 degrees> <../data/A2in.pdf, page i
-s rotated 90 degrees>] <../data/A4.pdf, id=221, 569.12625pt x 387.4475pt>
+[8 <../data/A2ex.pdf, page is rotated 90 degrees>]
+<../data/A4.pdf, id=175, 569.12625pt x 387.4475pt>
 File: ../data/A4.pdf Graphic file (type pdf)
-
-<use ../data/A4.pdf>
-Package pdftex.def Info: ../data/A4.pdf used on input line 67.
+ <use ../data/A4.pdf>
+Package pdftex.def Info: ../data/A4.pdf used on input line 66.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- [10] <../data/A5.pdf, id=225, 569.12625pt x 387.4475pt>
+
+[9 <../data/A2in.pdf, page is rotated 90 degrees>]
+<../data/A5.pdf, id=222, 569.12625pt x 387.4475pt>
 File: ../data/A5.pdf Graphic file (type pdf)
-
-<use ../data/A5.pdf>
-Package pdftex.def Info: ../data/A5.pdf used on input line 90.
+ <use ../data/A5.pdf>
+Package pdftex.def Info: ../data/A5.pdf used on input line 89.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- [11 <../data/A4.pdf, page is rotated 90 degrees>])
-[12 <../data/A5.pdf, page is rotated 90 degrees>] (./main.aux)
+
+[10 <../data/A4.pdf, page is rotated 90 degrees>] [11 <../data/A5.pdf, page is 
+rotated 90 degrees>] <../data/B2.pdf, id=317, 569.12625pt x 387.4475pt>
+File: ../data/B2.pdf Graphic file (type pdf)
+
+<use ../data/B2.pdf>
+Package pdftex.def Info: ../data/B2.pdf used on input line 122.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+) [12 <../data/B2.pdf, page is rotated 90 degrees>]
+(./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 16217 strings out of 493085
- 321113 string characters out of 6136917
- 360272 words of memory out of 5000000
- 19492 multiletter control sequences out of 15000+600000
+ 16223 strings out of 493085
+ 321204 string characters out of 6136917
+ 360285 words of memory out of 5000000
+ 19497 multiletter control sequences out of 15000+600000
  12904 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,39p,10401b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1198,10 +1206,10 @@ fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf
 /fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/
 cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pf
 b>
-Output written on main.pdf (12 pages, 370739 bytes).
+Output written on main.pdf (12 pages, 383564 bytes).
 PDF statistics:
- 363 PDF objects out of 1000 (max. 8388607)
- 176 compressed objects within 2 object streams
+ 407 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 

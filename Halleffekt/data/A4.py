@@ -9,7 +9,7 @@
 #
 # Creation Date : So 12 Jun 2016 17:47:49 CEST
 #
-# Last Modified : So 19 Jun 2016 19:09:01 CEST
+# Last Modified : So 19 Jun 2016 20:47:11 CEST
 #
 #####################################
 from ROOT import *
@@ -118,7 +118,7 @@ g1.SetLineColor(kBlue)
 #leg.AddEntry(g1, "n_{i}")
 
 mg = TMultiGraph()
-mg.SetTitle("Ladungstr#ddot{a}gerkonzentration;T / K;n_{i}")
+mg.SetTitle("Ladungstr#ddot{a}gerkonzentration;T / K;n_{i} / m^{-3}")
 mg.Add(g1)
 
 c1 = TCanvas( 'c1', '', 200, 10, 700, 500)
