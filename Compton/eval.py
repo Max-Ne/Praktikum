@@ -8,7 +8,7 @@ gROOT.Reset()
 #####################
 
 d = 2.55 					# Durchmesser Kristall, cm
-r = 21.5 					# Abstand Target Kristall cm
+r = 21.5 					# Abstand Target Kristall, cm
 
 Z_AL = 13. 					# Ordnungszahl
 L = 6.022140857 * (10**23)	 		# mol**(-1) - Avogadro-Konstante
@@ -17,19 +17,21 @@ rho_AL = 2.70					# g/cm**3 (20 Celsius)
 d_target = 1.					# cm
 l_target = 1.					# cm
 
-Delta_Omega = np.pi * (d/2)*(d/2) / (r*r)	# 1
 Phi_Null = 1.54 * (10**6)			# 1/(cm**2 s)
 Phi_Null_err = 0.09 * (10**6)			# 1/(cm**2 s)
 Delta_T = 2016 - 1971				# a
 eps_inv = 2.08					# 1
-T_Half = 30					# a
+eps_inv_err = 0.01				# 1
+T_Half = 30.					# a
 
+t = 300.					# s, Messzeit
+
+Delta_Omega = np.pi * (d/2)*(d/2) / (r*r)	# 1
 
 Phi = Phi_Null * (2**(-(Delta_T/T_Half)))			# 1/(cm**2 s)
 Phi_err = Phi_Null_err * (2**(-(Delta_T/T_Half)))		# 1/(cm**2 s)
 
 n = L/A_AL * Z_AL * rho_AL * np.pi * (d_target/2.)*(d_target/2.) * l_target	# 1
-
 
 
 ####################
@@ -113,73 +115,147 @@ x_err = np.zeros(x.shape)
 
 
 #################
-# PART I - dif. xsec with respect to solid angel
+# PART I - DIF. XSEC with respect to solid angel
 #################
 
 R = np.zeros(9)
+R_err = np.zeros(9)
 dif_xsec = np.zeros(9)
+dif_xsec_err = np.zeros(9)
+angel_deg = np.zeros(9)
 
 for i in range(9):
-  R[i] = y[i].sum()
+  angel_deg[i] = i*10 + 20
   
-  dif_xsec[i] = R[i]/Delta_Omega * 1./(Phi * n) * eps_inv
+  R[i] = y[i].sum()
+  R_err[i] = np.sqrt(sum(y_err[i]**2))
+  
+  dif_xsec[i] = float(R[i])/Delta_Omega * 1./(Phi * n * t) * eps_inv * (10**25)
+  #units		1  /     1	  1./(cm**-2 s**-1 * s) * 1		= cm**(-1) * 10**25
+  #error on: R, Phi, eps_inv
+
+  dif_xsec_err[i] = np.sqrt( (dif_xsec[i]/R[i]*R_err[i])**2 + (dif_xsec[i]/Phi * Phi_err)**2 + (dif_xsec[i]/eps_inv * eps_inv_err)**2 )
+
+print "angel in degree, dif_xsec, dif_xsec_err"
+for a,xs,xse in zip(angel_deg, dif_xsec, dif_xsec_err):
+  print a,xs,xse
 
 
-print dif_xsec
-
-"""
 ############
-# MAKE 10 PLOTS ... MAYBE NOT NEEDED
+# PART II - ENERGY SHIFT
 ############
+#1. MAKE 10 PLOTS WITH GAUS FITS AND EXTRACT CHANNELS
+fit_min = [226,209,183,161,131,114,97,81,77]
+fit_max = [301,278,250,214,196,172,144,130,111]
 
+channels, channels_err = np.zeros(9), np.zeros(9)
 graphs = []
+graphs_no_err = []
 canvas = []
+fit_functions = []
+legs = []
+
 for i in range(len(filenames_bkg)):
   graphs.append(TGraphErrors(len(x[i]),x[i],y[i],x_err[i],y_err[i]))
+  graphs_no_err.append(TGraphErrors(len(x[i]),x[i],y[i]))
   canvas.append(TCanvas('c'+str(i+1), str(i+1), 200, 10, 700, 500 ))
+  canvas[i].SetGrid();
   canvas[i].cd();
   
-  graphs[i].Draw("AP")
+  fit_functions.append(TF1("f"+str(i+1),"gaus",fit_min[i],fit_max[i]))
+  
+  graphs_no_err[i].SetTitle("Polar Angle #Theta = " + str(i*10 + 20) + "#circ; channel; # Events")
+  graphs_no_err[i].SetMinimum(0)
+  graphs[i].Fit("f"+str(i+1),"R")  
+  
+  legs.append(TLegend(.6,.8,.9,.9,""));
+  legs[i].SetFillColor(0);
+  graphs_no_err[i].SetFillColor(0);
+  legs[i].AddEntry(graphs_no_err[i],"data points", "p");
+  legs[i].AddEntry(fit_functions[i],"gaus fit in given range");
+
+  
+  channels[i] = fit_functions[i].GetParameter(1)
+  channels_err[i] = fit_functions[i].GetParameter(2)
+  
+  #graphs[i].Draw("AP")
+  graphs_no_err[i].SetMarkerSize(2.0)
+  graphs_no_err[i].Draw("AP")
+  fit_functions[i].Draw("SAME")
+  legs[i].Draw()
+  
   canvas[i].Update();
+  canvas[i].SaveAs("./plots/"+str(i*10 + 20)+"_deg.pdf")
+
+#2. CHANNELS TO ENERGIES
+calib_inters = 5.
+calib_slope = 5.
+calib_inters_err = 0.
+calib_slope_err = 0.
+# energy = calib_inters + calib_slope * channels
+
+energies = calib_inters + calib_slope*channels
+energies_err = np.sqrt(calib_inters_err**2 + (channels*calib_slope_err)**2 + (channels_err*calib_slope)**2)
+
+print channels
+print channels_err
+print energies
+print energies_err
+
+
+
+#3. LINEAR FIT ACCORDING TO FORMULAR IN PREP
+
+# formular: 1/E' = 1/E + 1/(m_0 c**2) * (1 - cos \theta )
+
+angel_pi = angel_deg *np.pi / 180.
+one_m_cos_theta = 1. - np.cos(angel_pi)
+one_m_cos_theta_err = np.zeros(one_m_cos_theta.shape)
+
+graph_2 = TGraphErrors(len(angel_pi), one_m_cos_theta, 1./energies, one_m_cos_theta_err, energies_err/(energies**2))
+
+graph_2.SetMarkerStyle(kOpenCircle)
+graph_2.SetMarkerColor(kBlue)
+graph_2.SetLineColor(kBlue);
+
+graph_2.GetYaxis().SetNdivisions(502)
+
+# fit function
+f_lin = TF1("Linear Law","[0]+x*[1]")
+f_lin.SetLineColor(kRed);
+f_lin.SetLineStyle(1);
+
+graph_2.Fit(f_lin)
+graph_2.SetTitle("Linear Fit of inverse Energies;1 - #cos (#theta);E^{-1} in keV^{-1}")
+
+c2 = TCanvas('c_2', 'canvas_2', 200, 10, 700, 500 )
+c2.SetGrid()
+c2.cd()
+
+last_leg = TLegend(.1,.8,.3,.9,"");
+last_leg.SetFillColor(0);
+graph_2.SetFillColor(0);
+last_leg.AddEntry(graph_2,"data points");
+last_leg.AddEntry(f_lin,"linear fit","l");
+
+graph_2.Draw("AP")
+last_leg.Draw("SAME")
+
+c2.Update()
+c2.SaveAs("./plots/inv_el_mass.pdf")
+
+inters = f_lin.GetParameter(0)
+inters_err = f_lin.GetParError(0)
+slope = f_lin.GetParameter(1)
+slope_err = f_lin.GetParError(1)
+#print inters, inters_err, slope, slope_err 
+
+inv_el_mass = 1./slope
+inv_el_mass_err = slope_err/(slope**2)
+
+print 'inv electron mass in keV: ',inv_el_mass, ' pm ', inv_el_mass_err
 
 raw_input()
-
-"""
-############
-# GET CALIBRATION DATA
-############
-"""
-#x - channels, y - number of events
-x = []
-y = []
-
-filenames=["calibrationCO60.txt","calibrationCS137.txt","calibrationNA22.txt"]
-
-for i in range(len(filenames)):
-  x.append([])
-  y.append([])
-  dataf = open("data/" + filenames[i], 'r');
-  for line in dataf:
-    if line.startswith("#") or line.startswith('\r') or line.startswith('\n'):
-      continue;
-    
-    line = line.strip()
-    line = line.split(' ',1)
-    line[0] = line[0].strip()
-    line[1] = line[1].strip()
-    
-    x[i].append(float(line[0].replace(',','.')))
-    y[i].append(float(line[1].replace(',','.')))
-
-  dataf.close()
-
-x = np.array(x)
-y = np.array(y)
-
-#assume poisson error
-x_err = np.zeros(x.shape)
-y_err = np.sqrt(y)
-"""
 """
 #############
 ## PART I - FIT SPECIFIC RANGES IN DATA WITH GAUS

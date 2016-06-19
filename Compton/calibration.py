@@ -52,6 +52,7 @@ caligraphs = []
 caligraphs2 = []
 calicanvas = []
 fit_functions = []
+legs = []
 
 
 # loop over different sources, each source has its own canvas. 2 fits for NA22 (i=2)
@@ -83,11 +84,19 @@ for i in range(len(filenames)):
   caligraphs2[i].Fit("f"+str(i+1),"R")  
   if i == 2:
     caligraphs2[i].Fit("f"+str(i+1)+"_2","R")  
+    
+  legs.append(TLegend(.6,.8,.9,.9,""));
+  legs[i].SetFillColor(0);
+  caligraphs[i].SetFillColor(0);
+  legs[i].AddEntry(caligraphs[i],"data points", "p");
+  legs[i].AddEntry(fit_functions[i],"gaus fit in given range");
   
   caligraphs[i].Draw("AP")
   fit_functions[i].Draw("SAME")
   if i == 2:
     fit_functions[i+1].Draw("SAME")
+  
+  legs[i].Draw("SAME")
   
   calicanvas[i].Update()
   calicanvas[i].SaveAs("./plots/calibration/" + outn + "_fit.pdf")
@@ -127,7 +136,7 @@ graph_lin_fit.SetLineColor(kBlue);
 
 # fit function
 f_lin = TF1("Linear Law","[0]+x*[1]")
-f_lin.SetLineColor(kBlack);
+f_lin.SetLineColor(kRed);
 f_lin.SetLineStyle(1);
 
 # fit
@@ -138,7 +147,15 @@ graph_lin_fit.SetTitle("Linear Fit of Channels;Energy in keV;channel")
 c4 = TCanvas( 'c4', 'The Fit Canvas', 200, 10, 700, 500 )
 c4.SetGrid()
 
+last_leg = TLegend(.1,.8,.3,.9,"");
+last_leg.SetFillColor(0);
+graph_lin_fit.SetFillColor(0);
+last_leg.AddEntry(graph_lin_fit,"data points");
+last_leg.AddEntry(f_lin,"linear fit","l");
+  
+
 graph_lin_fit.Draw("AP")
+last_leg.Draw("SAME");
 c4.Update()
 
 c4.SaveAs("./plots/calibration/lin_fit.pdf")
