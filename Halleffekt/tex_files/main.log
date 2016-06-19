@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  17 JUN 2016 10:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.4.20)  19 JUN 2016 21:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -914,7 +914,14 @@ Package: listings 2015/06/04 1.6 (Carsten Heinz)
 
 (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
 Package: placeins 2005/04/18  v 2.2
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `fig:leitin' multiply defined.
+
+
+LaTeX Warning: Label `fig:leitin' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 26.
@@ -931,8 +938,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 26.
 LaTeX Font Info:    ... okay on input line 26.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ts1enc.dfu
 File: ts1enc.dfu 2014/09/29 v1.1m UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
@@ -1130,47 +1136,80 @@ Package pdftex.def Info: ./chap/Hallc_logTemp.png used on input line 80.
 File: ../data/A1R_h.pdf Graphic file (type pdf)
 
 <use ../data/A1R_h.pdf>
-Package pdftex.def Info: ../data/A1R_h.pdf used on input line 18.
+Package pdftex.def Info: ../data/A1R_h.pdf used on input line 16.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- <../data/A2ex.pdf, id=33, 569.12625pt x 387.4475pt>
+ <../data/A1sigma.pdf, id=33, 569.12625pt x 387.4475pt>
+File: ../data/A1sigma.pdf Graphic file (type pdf)
+
+<use ../data/A1sigma.pdf>
+Package pdftex.def Info: ../data/A1sigma.pdf used on input line 23.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+ [6] [7 <../data/A1R_h.pdf, page is rotated 90 degrees> <../data/A1sigma.pdf, p
+age is rotated 90 degrees>]
+<../data/A2ex.pdf, id=127, 569.12625pt x 387.4475pt>
 File: ../data/A2ex.pdf Graphic file (type pdf)
+ <use ../data/A2ex.pdf>
+Package pdftex.def Info: ../data/A2ex.pdf used on input line 43.
+(pdftex.def)             Requested size: 199.19717pt x 135.60864pt.
 
-<use ../data/A2ex.pdf>
-Package pdftex.def Info: ../data/A2ex.pdf used on input line 34.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- <../data/A2in.pdf, id=34, 569.12625pt x 387.4475pt>
+<../data/A2in.pdf, id=128, 569.12625pt x 387.4475pt>
 File: ../data/A2in.pdf Graphic file (type pdf)
+ <use ../data/A2in.pdf>
+Package pdftex.def Info: ../data/A2in.pdf used on input line 50.
+(pdftex.def)             Requested size: 199.19717pt x 135.60864pt.
 
-<use ../data/A2in.pdf>
-Package pdftex.def Info: ../data/A2in.pdf used on input line 41.
+[8 <../data/A2ex.pdf, page is rotated 90 degrees>]
+<../data/A4.pdf, id=175, 569.12625pt x 387.4475pt>
+File: ../data/A4.pdf Graphic file (type pdf)
+ <use ../data/A4.pdf>
+Package pdftex.def Info: ../data/A4.pdf used on input line 66.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-) [6] [7 <../data/A1R_h.pdf, page is rotated 90 degrees> <../data/A2ex.pdf, pag
-e is rotated 90 degrees>] [8 <../data/A2in.pdf, page is rotated 90 degrees>] (.
-/main.aux) ) 
+
+[9 <../data/A2in.pdf, page is rotated 90 degrees>]
+<../data/A5.pdf, id=222, 569.12625pt x 387.4475pt>
+File: ../data/A5.pdf Graphic file (type pdf)
+ <use ../data/A5.pdf>
+Package pdftex.def Info: ../data/A5.pdf used on input line 89.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+[10 <../data/A4.pdf, page is rotated 90 degrees>] [11 <../data/A5.pdf, page is 
+rotated 90 degrees>] <../data/B2.pdf, id=317, 569.12625pt x 387.4475pt>
+File: ../data/B2.pdf Graphic file (type pdf)
+
+<use ../data/B2.pdf>
+Package pdftex.def Info: ../data/B2.pdf used on input line 122.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+) [12 <../data/B2.pdf, page is rotated 90 degrees>]
+(./main.aux)
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
 Here is how much of TeX's memory you used:
- 16201 strings out of 493085
- 320834 string characters out of 6136917
- 360220 words of memory out of 5000000
- 19479 multiletter control sequences out of 15000+600000
+ 16223 strings out of 493085
+ 321204 string characters out of 6136917
+ 360285 words of memory out of 5000000
+ 19497 multiletter control sequences out of 15000+600000
  12904 words of font info for 36 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,8n,39p,10401b,508s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/te
-xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/symbols/msbm5.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb
-></usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/f
-onts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm
--super/sfrm1000.pfb>
-Output written on main.pdf (8 pages, 319671 bytes).
+{/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texliv
+e/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pf
+b>
+Output written on main.pdf (12 pages, 383564 bytes).
 PDF statistics:
- 215 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 407 PDF objects out of 1000 (max. 8388607)
+ 194 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
