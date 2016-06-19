@@ -1,7 +1,7 @@
 \subsection{Calibration}
 
 First we have to calibrate the system. We only measure the number of entries in different channels, but we know at which energies the spectrum of ${}^{22}\mathrm{Na}$, $^{60}\mathrm{Co}$ and $^{137}\mathrm{Cs}$ have peaks due to radiation. With these values we can make a linear regression and map the channels onto energies. \\
-Fig.2.1 shows the entries in each channel for ${}^{22}\mathrm{Na}$ as an example. We fitted the peak with a gaussian function to get a better estimated value. \\
+Fig.2.1 shows the entries in each channel for ${}^{22}\mathrm{Na}$ as an example. We fitted the peaks with gaussian functions to get better estimated values. \\
 In Fig.2.2 you can see the channels of each peak and the corresponding energies. Fig.2.3 finally shows the linear regression with the following parameters:
 $$\mathrm{y-intercept} = (-3.02810 \pm 1.48205) \cdot 10^{2} \ keV$$
 $$\mathrm{slope} =  (3.64232 \pm 0.513385) \ keV$$
@@ -74,7 +74,7 @@ $\Theta$ in ${}^{\circ}$ & $\frac{\mathrm{d}\sigma}{\mathrm{d}\Omega}$ in $cm^{-
 
 \subsection{Energy Shift and Invariant Mass of Electrons}
 
-The energy of a fixed angle is determined by a gaussian fit, an example is shown in Fig.2.5 for $\Theta = 50^{\circ}$. The procedure is the same as in the calibration subsection above. Using the measured linear fit from above we can acquire the energies from the channels.\\
+The energy of a fixed angle is determined by a gaussian fit, an example is shown in Fig.2.5 for $\Theta = 50^{\circ}$. The procedure is the same as in the calibration subsection above. Using the measured linear fit from above we can acquire the energies given the channels.\\
 As described in the preparation we plot the inverse energy $\frac{1}{E}$ over $1 - \cos(\Theta)$. The inverse of the slope gives the invariant mass of the electron in $keV$. The resulting plot is given in Fig.2.6 with following parameters for the fit:
 $$\mathrm{y-intercept} = (1.20237 \pm 0.553517) \cdot 10^{-4} \ keV$$
 $$\mathrm{slope} =  (4.55878 \pm 3.02294) \cdot 10^{-3} \ keV$$
@@ -83,7 +83,7 @@ $$(219.357 \pm 145.456) \ keV$$
 
 The uncertainty for $\frac{1}{E}$ is calculated by 
 $$\sigma _{energy}^{2} = (\frac{1}{slope})^{2} \cdot (\sigma _{channel} ^{2} + \sigma _{intercept} ^{2} + (channel - intercept)^{2} \cdot (\frac{\sigma_{slope}}{slope})^{2}) $$
-Since $\sigma _{intercept}$ is a big number originating from the calibration and it is present even for small values of ${E}$, it dominates the uncertainty in these regime. The result is a big absolute uncertainty for big values of the inverse energy $\frac{1}{E}$, which is the reason for the graph above.
+Since $\sigma _{intercept}$ is a big number originating from the calibration and it is present even for small values of ${E}$, it dominates the uncertainty in this regime. The result is a big absolute uncertainty for big values of the inverse energy $\frac{1}{E}$, which is the reason for the appereance of the graph below.
 
 \begin{figure}[h]
 \includegraphics[scale=0.5]{./../plots/50_deg.pdf}
