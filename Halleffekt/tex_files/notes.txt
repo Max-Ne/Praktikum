@@ -1,16 +1,131 @@
-prep:
+bändermodell
+fermi statistik
+chap 3: 
+    dotierung
+    ladungsträgerdichte / bewegl (temp)
+    2DEG
+    leitfähigkeit
+    hall bei uni- und bipolarer leitung
+    kontaktgeometrie 
+    versuchsaufbau
 
-baender
-    propagierende welle wird am periodischen potential gestreut
-    an den raendern der brioullin zonen entsteht konstruktive interferenz mit der rueckgestreuten welle
-    -> stehende wellen
-    -> zwei loesungen mit gleicher kinetischer aber unterschiedlicher potentieller energie
-    ausserdem:
-        gruppengeschwindigkeit der stehenden welle = 0
-    => baender modell
-    ueberlapp der wellenfunktionen
-generation / rekombination
 
-intensitaetsabh der leitfaehigkeit
+bändermodell: siehe photowiderstand
 
-frequenzabh
+fermi stat:
+    elektronen sind spin 1/2 teilchen, folgen also der fermi-dirac verteilung:
+    1/(exp(beta * (E-Ef)) + 1)
+    die fermi energie Ef ist die energie, bei der die besetzungswahrscheinlichkeit =1/2 ist (auch wenn dort keine zustände exisieren.
+    bei HL liegt Ef zwischen valenz und leitungsband
+
+    näherung der nichtentartung: fermi -> boltzmann
+    wenn abstand Ef zu Ev bzw El größer als kbT, funktioniert bei nicht zu hoher dotierung
+
+dotierung:
+    donator: bieten elektron knapp unter leitungsbandkante -> leicht thermisch in leitungsband angeregt.
+    acceptor: bieten zustand knapp über valnzbandkante -> nimmt elektron leicht auf und erzeugt ein loch
+    ladungsträgerkonzentration der einen sorte nimmt auf kosten der anderen zu. -> majoritätsladungsträger
+    im thermischen ggw:  n*p = n_i **2 (T) (i for intrinsic)
+    bei niedrigen temperaturen tragen vorherrschend dotierungsladungsträger zur leitung bei (reserve- erschöpfungsbereich ) bei hohen ggw ladungsträger
+
+ladungsträgerdichte und beweglichkeit in abhängigkeit von temperatur:
+    beweglichkeit: proportionalität zwischen elektrischem feld und driftgeschwindigkeit der ladungsträger
+
+    beweglichkeit sinkt mit der temperatur, da störstellen bei niedrigen temperaturen (=geschwindigkeiten) stärker streuen (~T**3/2)
+    beweglichkeit steigt, wenn temperatur sinkt, da streuung mit akustischen phononen abnimmt (~T**/3/2)
+        => maximum bei bestimmter temperatur
+    (bei 2DEG: ~T)
+
+    streuung an optischen phononen: bose einstein verteilt (auch bei 2DEG)
+    ausserdem: zwischentalstreuung bei indirekten hl, elektron-loch streuung
+
+
+zweidimensionales elektronengas:
+    2 dim elektronengas in halbleiterheterostrukturen
+    durch abwechselnde schichten von materialien mit verschiedenen bandücken, können sich die leitungselektronen nur noch in einer ebene frei bewegen. die zustände senkrecht zu dieser ebene (in richtung der schichten) sind quantisiert.
+    hohe beweglichkeit, da die ladungsträger räumlich von den donatoren getrennt sind (keine störstellenstreuung)
+
+leitfähigkeit:
+    leitfähigkeit: ladung * dichte * mobilität 
+    
+    
+hall-effekt bei uni- und  bipolarer leitung:
+    unipolar:
+    F=q*(v x B)
+    akkumulierte ladung an den probenseiten, bis aufgebaute hall kraft die lorentzkraft kompensiert
+    E_H = - 1/nq * (J x B) mit hall koeeffizient R_H = 1/nq
+    gemessen wird hallspannung, die von der probengeometrie abhängt
+
+    bipolar (löcher und elektronen tragen zum ladungstransport bei):
+        löcher und elektronen werden in gleiche richtungen abgelenkt -> effekte schwächen sich gegenseitig.
+        R_H =  (p mup**2 - n mun**2) / (|e| (n mun + p mup)**2) = (p - nb**2) / (|e| (p+nb**2)**2)  mit b = mun / mup
+
+    extrinsisch -> unipolar; intrinsisch -> bipolar
+
+
+    unipolar:
+    mu = R_H * sigma
+    bipolar: 
+    sigma * R_H = |mup - mun|
+    auftragen log(sigma R_H) über log(T)
+        beim übergang extrinsisch -> intrinsisch
+            stufe entsprechend der minoritätsbeweglichk
+kontaktgeometrie:
+    
+    barren
+        b ~ d
+    plättchen
+        b > d
+        querspannung an der dünnen seite
+    strom längs
+
+    J = I / bd
+    U/l = E
+    U_H / b = E_H
+
+    vorzeichen von R_H ist unbekannt
+
+    van der pauw:
+        kreuz mit vier kontakten ABCD
+        sigma = ln(2) / pi  * (I AB)/(U CD)
+        R_H = Delta U BD / I AC * 1/B
+
+versuchsaufbau:
+
+versuche:
+
+
+
+    messung:
+        leitfähigkeit und hall koeffizient
+            aus Iprobe, Uleit, B und Uh
+            J = sigma E -> I / bd = sigma Uleit/l -> l Iprobe /U  bd = sigma
+            U_H / d = -R_H ( I/bd x B) 
+
+                
+        grenztemperaturen für leitungsbereiche
+            1/R_H über T    für extrinsisch - übergang
+            sigma * R_H   für übergang - intrinsisch
+        leitungstyp im extrinsischen bereich
+            mun > mup => b > 1 => R_H < 0
+            aus geometrie und polung?
+
+        im intrinsischen bereich:
+            intrinsische ladungsträgerkonzentration
+                R_H = 1/(|e| n_i) 1-b/1+b mit b(T) gegeben
+            bandlückenwert
+                arrhenius
+                    plot ln(n_i / T**3/2) = yachsenabschnitt - E_G0 /2kbT
+                    
+            bandlücke bei 300K
+                alpha gegeben
+                    E_G(T) = E_G0 - alpha T
+            ladungsträgerkonz bei 300K
+                n_i (300K) = T**3/2 * exp(yachs - E_G0 / 2kbT)
+
+        
+        probe B:
+            beweglichkeit:
+                sigma = ln(2) / pi  * (I AB)/(U CD)
+                R_H = Delta U BD / I AC * 1/B
+            vergleich block zu 2deg
