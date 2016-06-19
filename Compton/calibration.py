@@ -43,10 +43,10 @@ y_err = np.sqrt(y)
 ## PART I - FIT SPECIFIC RANGES IN DATA WITH GAUS
 #############
 
-# CO60, CS137, NA22, NA22.
+# CO60, CS137, NA22, NA22, CO60(2.)
 # fitranges
-fit_min = [325,255,188,360]
-fit_max = [395,303,242,428]
+fit_min = [325,255,188,360,440]
+fit_max = [395,303,242,428,490]
 
 caligraphs = []
 caligraphs2 = []
@@ -63,6 +63,7 @@ for i in range(len(filenames)):
   if i == 0:
     canvasname = "{}^{60}Co"
     outn = "CO_60"
+    fit_cobalt_2 = TF1("f_CO_2","gaus",fit_min[-1],fit_max[-1])
   elif i == 1:
     canvasname = "{}^{137}Cs"
     outn = "CS_137"
@@ -71,6 +72,8 @@ for i in range(len(filenames)):
     outn = "NA_22"
     fit_functions.append(TF1("f"+str(i+1)+"_2","gaus",fit_min[i+1],fit_max[i+1]))
     
+  
+  
   
   calicanvas.append(TCanvas('c'+str(i+1), canvasname, 200, 10, 700, 500 ))
   calicanvas[i].SetGrid()
@@ -82,6 +85,8 @@ for i in range(len(filenames)):
   calicanvas[i].cd()
   
   caligraphs2[i].Fit("f"+str(i+1),"R")  
+  if i == 0:
+    caligraphs2[i].Fit("f_CO_2","R")
   if i == 2:
     caligraphs2[i].Fit("f"+str(i+1)+"_2","R")  
     
@@ -93,6 +98,8 @@ for i in range(len(filenames)):
   
   caligraphs[i].Draw("AP")
   fit_functions[i].Draw("SAME")
+  if i == 0:
+    fit_cobalt_2.Draw("SAME")
   if i == 2:
     fit_functions[i+1].Draw("SAME")
   
@@ -111,7 +118,8 @@ print ""
 #############
 
 # energies have to be changed (Mitschrieb!!)
-energies = np.array([300.,250.,200.,350.])
+# CO, CO, CS, NA, NA in keV
+energies = np.array([1173.240,1332.508,661.659,511.0,1274.577])
 energies_err = np.zeros(energies.shape)
 channels = []
 channels_err = []
@@ -122,12 +130,20 @@ for i in range(len(filenames) + 1):
   sigma = fit_functions[i].GetParameter(2);
   channels.append(mean)
   channels_err.append(sigma)
+  if i == 0:
+    mean = fit_cobalt_2.GetParameter(1);
+    sigma = fit_cobalt_2.GetParameter(2);
+    channels.append(mean)
+    channels_err.append(sigma)
   
 channels = np.array(channels)
 channels_err = np.array(channels_err)
 
+#print channels
+#print channels_err
+
 # graph for lin fitting
-graph_lin_fit = TGraphErrors(len(energies), energies, channels, energies_err, channels_err)
+graph_lin_fit = TGraphErrors(len(energies),  channels, energies, channels_err, energies_err)
 
 # cosmetics
 graph_lin_fit.SetMarkerStyle(kOpenCircle)
@@ -136,12 +152,15 @@ graph_lin_fit.SetLineColor(kBlue);
 
 # fit function
 f_lin = TF1("Linear Law","[0]+x*[1]")
+f_lin.SetParameter(0,100.)
+f_lin.SetParameter(1,200.)
 f_lin.SetLineColor(kRed);
 f_lin.SetLineStyle(1);
 
 # fit
 graph_lin_fit.Fit(f_lin);
-graph_lin_fit.SetTitle("Linear Fit of Channels;Energy in keV;channel")
+graph_lin_fit.SetTitle("Linear Fit of Channels;channel;Energy in keV")
+graph_lin_fit.GetYaxis().SetTitleOffset(1.2)
 
 # plot
 c4 = TCanvas( 'c4', 'The Fit Canvas', 200, 10, 700, 500 )
@@ -166,23 +185,29 @@ print "fit mean:  ", channels[0]
 print "fit sigma: ", channels_err[0]
 print "energy:    ", energies[0]
 
-print "--------CS_137-------------"
+print "--------CO_60_FIT_II-------"
 print "fit range:  " + str(fit_min[1]) + " ... " + str(fit_max[1])
 print "fit mean:  ", channels[1]
 print "fit sigma: ", channels_err[1]
 print "energy:    ", energies[1]
 
-print "--------NA_22_FIT_I--------"
+print "--------CS_137-------------"
 print "fit range:  " + str(fit_min[2]) + " ... " + str(fit_max[2])
 print "fit mean:  ", channels[2]
 print "fit sigma: ", channels_err[2]
 print "energy:    ", energies[2]
 
-print "--------NA_22_FIT_II--------"
+print "--------NA_22_FIT_I--------"
 print "fit range:  " + str(fit_min[3]) + " ... " + str(fit_max[3])
 print "fit mean:  ", channels[3]
 print "fit sigma: ", channels_err[3]
 print "energy:    ", energies[3]
+
+print "--------NA_22_FIT_II--------"
+print "fit range:  " + str(fit_min[4]) + " ... " + str(fit_max[4])
+print "fit mean:  ", channels[4]
+print "fit sigma: ", channels_err[4]
+print "energy:    ", energies[4]
 
 
 raw_input()

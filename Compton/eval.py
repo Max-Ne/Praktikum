@@ -188,13 +188,14 @@ for i in range(len(filenames_bkg)):
   canvas[i].SaveAs("./plots/"+str(i*10 + 20)+"_deg.pdf")
 
 #2. CHANNELS TO ENERGIES
-calib_inters = 5.
-calib_slope = 5.
-calib_inters_err = 0.
-calib_slope_err = 0.
+calib_inters = -302.810
+calib_slope = 3.64232
+calib_inters_err = 148.205
+calib_slope_err = 0.513385
 # energy = calib_inters + calib_slope * channels
 
 energies = calib_inters + calib_slope*channels
+#energies_err = np.sqrt(channels_err**2 + calib_inters_err**2 + (channels - calib_inters)**2 * (calib_slope_err / calib_slope)**2) / calib_slope
 energies_err = np.sqrt(calib_inters_err**2 + (channels*calib_slope_err)**2 + (channels_err*calib_slope)**2)
 
 print channels
@@ -226,7 +227,7 @@ f_lin.SetLineColor(kRed);
 f_lin.SetLineStyle(1);
 
 graph_2.Fit(f_lin)
-graph_2.SetTitle("Linear Fit of inverse Energies;1 - cos (#theta);E^{-1} in keV^{-1}")
+graph_2.SetTitle("Linear Fit of inverse Energies;1 - cos (#theta);E^{-1} in keV^{-1}     ")
 
 c2 = TCanvas('c_2', 'canvas_2', 200, 10, 700, 500 )
 c2.SetGrid()
