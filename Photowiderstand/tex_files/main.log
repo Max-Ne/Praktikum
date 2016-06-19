@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  12 JUN 2016 12:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  12 JUN 2016 12:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,21 +844,24 @@ File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 File: listings.cfg 2013/08/26 1.5b listings configuration
 ))
 Package: listings 2013/08/26 1.5b (Carsten Heinz)
- (./main.aux)
+
+(/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 29.
+LaTeX Font Info:    ... okay on input line 29.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
@@ -988,12 +991,12 @@ e
 \AtBeginShipoutBox=\box55
 \c@lstlisting=\count167
 \c__siunitx_mathsf_int=\count168
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 29.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1001,38 +1004,162 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \c__siunitx_mathtt_int=\count169
 
 (./chap/preparation.tex
-Overfull \hbox (0.67223pt too wide) in paragraph at lines 3--7
-\T1/cmr/m/n/10 There are dif-fe-rent kinds of ra-dia-ti-on. In the ex-pe-ri-men
-ts the-re are EM-radiation,
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 18--19
+
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]) [3] (./main.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+Underfull \hbox (badness 10000) in paragraph at lines 29--30
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 31--33
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--48
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 59--62
+
+ []
+
+
+Overfull \hbox (1.51599pt too wide) in paragraph at lines 66--68
+\T1/cmr/m/n/10 der mitt-le-ren Le-bens-dau-er $\OML/cmm/m/it/10 ^^\[]$ \T1/cmr/
+m/n/10 der Über-schus-s-elek-tro-nen bzw. -defektelektronen,
+ []
+
+[3]
+Overfull \hbox (7.08875pt too wide) in paragraph at lines 76--78
+ \T1/cmr/bx/n/10 Li-nea-re Re-kom-bi-na-ti-on[] \T1/cmr/m/n/10 liegt vor, wenn 
+die Licht-ein-strah-lung prak-tisch nichts
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
+
+ []
+
+[4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 119--121
+
+ []
+
+
+Overfull \hbox (0.62874pt too wide) in paragraph at lines 129--129
+[][]\T1/cmr/m/n/8 Lohninger, Hans: "Cad-mi-um-sul-fid", un-ter: an-or-ga-nik.ch
+emie.vias.org/cadmiumsulfid.html
+ []
+
+) [6] (./chap/evaluation.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 6--11
+
+ []
+
+<../A1/A1.pdf, id=35, 569.12625pt x 387.4475pt>
+File: ../A1/A1.pdf Graphic file (type pdf)
+ <use ../A1/A1.pdf>
+Package pdftex.def Info: ../A1/A1.pdf used on input line 15.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+Overfull \hbox (4.60576pt too wide) in paragraph at lines 24--31
+ [][] 
+ []
+
+[7 <../A1/A1.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 34--35
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 36--39
+
+ []
+
+[8] <../A2/A2_log.pdf, id=86, 569.12625pt x 387.4475pt>
+File: ../A2/A2_log.pdf Graphic file (type pdf)
+ <use ../A2/A2_log.pdf>
+Package pdftex.def Info: ../A2/A2_log.pdf used on input line 55.
+(pdftex.def)             Requested size: 227.64647pt x 154.97624pt.
+
+<../A2/A2_lin.pdf, id=87, 569.12625pt x 387.4475pt>
+File: ../A2/A2_lin.pdf Graphic file (type pdf)
+ <use ../A2/A2_lin.pdf>
+Package pdftex.def Info: ../A2/A2_lin.pdf used on input line 57.
+(pdftex.def)             Requested size: 227.64647pt x 154.97624pt.
+
+[9 <../A2/A2_log.pdf, page is rotated 90 degrees> <../A2/A2_lin.pdf, page is ro
+tated 90 degrees>] <../A3/A3.pdf, id=177, 569.12625pt x 387.4475pt>
+File: ../A3/A3.pdf Graphic file (type pdf)
+
+<use ../A3/A3.pdf>
+Package pdftex.def Info: ../A3/A3.pdf used on input line 76.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+ [10 <../A3/A3.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 90--96
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 96--98
+
+ []
+
+<../A4/A4_2fits.pdf, id=224, 569.12625pt x 387.4475pt>
+File: ../A4/A4_2fits.pdf Graphic file (type pdf)
+
+<use ../A4/A4_2fits.pdf>
+Package pdftex.def Info: ../A4/A4_2fits.pdf used on input line 102.
+(pdftex.def)             Requested size: 256.10445pt x 174.34976pt.
+ [11 <../A4/A4_2fits.pdf, page is rotated 90 degrees>]) [12] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14136 strings out of 494935
- 274189 string characters out of 6178122
- 302864 words of memory out of 5000000
- 17148 multiletter control sequences out of 15000+600000
- 11370 words of font info for 34 fonts, out of 8000000 for 9000
+ 14224 strings out of 494935
+ 275436 string characters out of 6178122
+ 304023 words of memory out of 5000000
+ 17209 multiletter control sequences out of 15000+600000
+ 18470 words of font info for 54 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 39i,6n,39p,10426b,378s stack positions out of 5000i,500n,10000p,200000b,80000s
- </
-home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/u
-buntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubuntuu
-ser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/.t
-exmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.p
-fb>
-Output written on main.pdf (3 pages, 107048 bytes).
+ 39i,10n,39p,10426b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </h
+ome/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0800.600pk> </home/ub
+untuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0600.600pk> </home/ubuntuus
+er/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm0700.600pk> </home/ubuntuuser/.te
+xmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/ubuntuuser/.texmf-va
+r/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubuntuuser/.texmf-var/font
+s/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/.texmf-var/fonts/pk/l
+jfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (12 pages, 219157 bytes).
 PDF statistics:
- 179 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 515 PDF objects out of 1000 (max. 8388607)
+ 167 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
