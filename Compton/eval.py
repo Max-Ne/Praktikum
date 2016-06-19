@@ -226,7 +226,7 @@ f_lin.SetLineColor(kRed);
 f_lin.SetLineStyle(1);
 
 graph_2.Fit(f_lin)
-graph_2.SetTitle("Linear Fit of inverse Energies;1 - #cos (#theta);E^{-1} in keV^{-1}")
+graph_2.SetTitle("Linear Fit of inverse Energies;1 - cos (#theta);E^{-1} in keV^{-1}")
 
 c2 = TCanvas('c_2', 'canvas_2', 200, 10, 700, 500 )
 c2.SetGrid()
