@@ -9,7 +9,7 @@
 #
 # Creation Date : So 12 Jun 2016 17:16:56 CEST
 #
-# Last Modified : So 12 Jun 2016 17:41:58 CEST
+# Last Modified : So 19 Jun 2016 18:57:51 CEST
 #
 #####################################
 
@@ -86,20 +86,28 @@ errR_H = np.zeros(len(Ts))
 sigmas = l * IAs / (b * d * UAleit) # S / m # as should be
 R_Hs = - UAH * b / (IAs * B ) * 0.001 # cubic meters / coulomb
 
+#write sigma * |R_Hs| to csv for protocol
+with open('sigmaR_H.csv', 'wb') as csvfile:
+    sigmaR_Hwriter = csv.writer(csvfile, delimiter=' ')
+    sigmaR_Hwriter.writerow(['#T in K', '#R_H in m**3 / C'])
+    sigmaR_Hwriter.writerows(zip(Ts, R_Hs*np.abs(R_Hs)))
+
+
 g1 = TGraphErrors(len(Ts), Ts, sigmas * np.abs(R_Hs), errT, errR_H)
 l = TLine(310., 1., 310., 5.)
+l.SetLineColor(kGreen)
 
 g1.SetMarkerStyle(kOpenCircle)
 g1.SetMarkerColor(kBlue)
 g1.SetLineColor(kBlue)
 
-leg = TLegend(.1,.8,.3,.9,"miep")
+leg = TLegend(.1,.1,.3,.2,"")
 leg.SetFillColor(0)
-#TODO oskar fix latex shit
-leg.AddEntry(g1, "#sigma #cdot R_H")
+leg.AddEntry(g1, "#sigma R_{H}")
+leg.AddEntry(l, "Grenztemperatur")
 
 mg = TMultiGraph()
-mg.SetTitle("Grenztemperatur: intrinsisch")
+mg.SetTitle("Grenztemperatur: intrinsisch;T / K;#sigma |R_{H}| / (1/T)")
 mg.Add(g1)
 
 c1 = TCanvas( 'c1', '', 200, 10, 700, 500)
@@ -108,10 +116,11 @@ c1.SetLogy(1)
 c1.SetLogx(1)
 
 mg.Draw("AP")
-#leg.Draw("SAME")
+leg.Draw("SAME")
 l.Draw("SAME")
 
 c1.Update()
+c1.SaveAs("A2in.pdf")
 
-raw_input()
+#raw_input()
 

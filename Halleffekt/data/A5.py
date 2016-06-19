@@ -1,18 +1,17 @@
 #!/usr/bin/env python
 #####################################
 #
-# Filename : A2.py
+# Filename : A5.py
 #
 # Projectname : 
 #
 # Author : Oskar Taubert
 #
-# Creation Date : So 12 Jun 2016 15:59:56 CEST
+# Creation Date : Fr 17 Jun 2016 09:41:04 CEST
 #
-# Last Modified : So 19 Jun 2016 18:32:06 CEST
+# Last Modified : So 19 Jun 2016 19:29:55 CEST
 #
 #####################################
-
 from ROOT import *
 
 import csv
@@ -28,6 +27,20 @@ b = 10. # mm
 d = 1. # mm
 
 B = 0.5 # T
+
+b0 = 1.24553
+db = 0.00107
+
+e = 1.602176 * 10**-19 #C
+
+alpha = 4 * 10**-4 # eV / K
+
+#grenztemperaturen
+T_e = 270.
+T_i = 310.
+
+kB = 8.61173303 * 10**-5 # eV / K
+
 
 ###entries:
 Ts = np.array([], dtype=np.float) # in degree Celsius
@@ -77,53 +90,71 @@ errT = 0.1 * np.ones(len(Ts))
 
 
 ############################
-### leitwertbereiche finden extrinsisch
+###
 ############################
 
-errSigma = np.zeros(len(Ts))
-errR_H = np.zeros(len(Ts))
+origlen = len(Ts)
+Ts = np.fromiter((x for x in Ts if x > T_i), dtype = np.float)
 
-sigmas = l * IAs / (b * d * UAleit) # S / m # as should be
+IAs = IAs[origlen-len(Ts):]
+UAleit = UAleit[origlen-len(Ts):]
+UAH = UAH[origlen-len(Ts):]
+
 R_Hs = - UAH * b / (IAs * B ) * 0.001 # cubic meters / coulomb
+b = b0 + db*Ts
 
-g1 = TGraphErrors(len(Ts), Ts, 1/np.abs(R_Hs), errT, errR_H)
-g2 = TGraphErrors(len(Ts), Ts, sigmas, errT, errSigma)
+n = 1/(-R_Hs * e) * (1-b)/(1+b)
+errn = np.zeros(len(Ts))
+print(n)
 
-l = TLine(270., 0.1, 270., 10.)
-l.SetLineColor(kGreen)
+print(n/Ts**1.5)
+
+#TODO oskar: tgrapherrors fucks it up for some reason
+g1 = TGraph(len(Ts), 1/Ts, np.log(n/Ts**1.5))
+#g1 = TGraphErrors(len(Ts), 1/Ts, np.log(n/Ts**1.5), errT, errn)
 
 g1.SetMarkerStyle(kOpenCircle)
 g1.SetMarkerColor(kBlue)
 g1.SetLineColor(kBlue)
 
-g2.SetMarkerStyle(kOpenCircle)
-g2.SetMarkerColor(kRed)
-g2.SetLineColor(kBlue)
 
-leg = TLegend(.1,.8,.6,.9,"")
+#f1 = TF1("fit", '[0]*exp([1]*x)', 0., 1.)
+f1 = TF1("Linear Law", "[0]+[1] * x", Ts[0], Ts[-1])
+f1.SetLineColor(kRed);
+f1.SetLineStyle(1);
+
+g1.Fit(f1)
+
+leg = TLegend(.1,.1,.3,.2,"")
 leg.SetFillColor(0)
-leg.AddEntry(g1, "inverser Hall-Koeffizient / (C/m^{3})")
-leg.AddEntry(g2, "Leitf#ddot{a}higkeit / (S/m)")
-leg.AddEntry(l, "Grenztemperatur")
+leg.AddEntry(g1, "Messdaten")
+leg.AddEntry(f1, "fit")
 
 mg = TMultiGraph()
-mg.SetTitle("Grenztemperatur: extrinsisch;T / K;")
+mg.SetTitle("Arrhenius;1/T / (1/K); ln(n_{i}/T^{3/2})")
 mg.Add(g1)
-mg.Add(g2)
 
 c1 = TCanvas( 'c1', '', 200, 10, 700, 500)
 c1.SetGrid()
-c1.SetLogy(1)
 
 mg.Draw("AP")
+f1.Draw("SAME")
 leg.Draw("SAME")
-l.Draw("SAME")
 
 c1.Update()
 
-c1.SaveAs("A2ex.pdf")
+c1.SaveAs("A5.pdf")
+
 #raw_input()
-############################
-#unrelated
-############################
-print(UAH)
+
+yachs = f1.GetParameter(0)
+
+E_G0 = -2 * kB * f1.GetParameter(1) # eV
+print('E_G0 = ', E_G0)
+
+E_G300 = E_G0 - alpha * 300 # eV
+print('E_G300 = ', E_G300)
+
+
+ni300 = 300**1.5 * np.exp(yachs - E_G0 / ( 2 * kB * 300))
+print('ni300 = ', ni300)

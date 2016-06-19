@@ -70,11 +70,19 @@ errSigma = np.zeros(len(Ts))
 #errsigma = 0.0 * np.ones(len(Ts))
 sigmas = l * IAs / (b * d * UAleit) # S / m # as should be
 
+#write sigmas to csv for protocol
+with open('sigma.csv', 'wb') as csvfile:
+    sigmawriter = csv.writer(csvfile, delimiter=' ')
+    sigmawriter.writerow(['#T in K', '#sigma in S / m'])
+    sigmawriter.writerows(zip(Ts, sigmas))
+
+
 mg1 = TMultiGraph()
 
 gLeit = TGraphErrors(len(Ts), Ts, sigmas, errT, errSigma)
 
-mg1.SetTitle("Leitf#ddot{a}higkeit /(S/m) #ddot{u}ber Temperatur/K")
+mg1.SetTitle("Leitf#ddot{a}higkeit #ddot{u}ber Temperatur;T / K;#sigma / (S/m)")
+
 
 gLeit.SetMarkerStyle(kOpenCircle)
 gLeit.SetMarkerColor(kBlue)
@@ -94,5 +102,7 @@ leg.Draw("SAME")
 
 c1.Update()
 
-raw_input()
+c1.SaveAs("A1sigma.pdf")
+
+#raw_input()
 

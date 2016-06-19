@@ -9,7 +9,7 @@
 #
 # Creation Date : So 12 Jun 2016 17:47:49 CEST
 #
-# Last Modified : So 12 Jun 2016 19:52:15 CEST
+# Last Modified : So 19 Jun 2016 19:09:01 CEST
 #
 #####################################
 from ROOT import *
@@ -96,8 +96,16 @@ b = b0 + db*Ts
 print(R_Hs)
 print((1-b)/(1+b))
 
-n = 1/(R_Hs * e) * (1-b)/(1+b)
+n = 1/(-R_Hs * e) * (1-b)/(1+b)
 errn = np.zeros(len(Ts))
+
+#write n_i to csv for protocol
+with open('n_i.csv', 'wb') as csvfile:
+    n_iwriter = csv.writer(csvfile, delimiter=' ')
+    n_iwriter.writerow(['#T in K', '#n_i'])
+    n_iwriter.writerows(zip(Ts, n))
+
+
 
 g1 = TGraphErrors(len(Ts), Ts, n, errT, errn)
 
@@ -105,12 +113,12 @@ g1.SetMarkerStyle(kOpenCircle)
 g1.SetMarkerColor(kBlue)
 g1.SetLineColor(kBlue)
 
-#leg = TLegend(.1,.8,.3,.9,"miep")
+#leg = TLegend(.1,.8,.3,.9,"")
 #leg.SetFillColor(0)
-#leg.AddEntry(g1, "n")
+#leg.AddEntry(g1, "n_{i}")
 
 mg = TMultiGraph()
-mg.SetTitle("Ladungstr#ddot{a}gerkonzentration")
+mg.SetTitle("Ladungstr#ddot{a}gerkonzentration;T / K;n_{i}")
 mg.Add(g1)
 
 c1 = TCanvas( 'c1', '', 200, 10, 700, 500)
@@ -122,4 +130,6 @@ mg.Draw("AP")
 
 c1.Update()
 
-raw_input()
+c1.SaveAs("A4.pdf")
+
+#raw_input()

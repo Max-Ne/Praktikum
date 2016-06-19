@@ -9,7 +9,7 @@
 #  *
 #  * Creation Date : So 12 Jun 2016 15:24:47 CEST
 #  *
-#  * Last Modified : So 12 Jun 2016 16:23:33 CEST
+#  * Last Modified : So 19 Jun 2016 18:03:39 CEST
 #  *
 #  *************************************/
 #
@@ -78,11 +78,17 @@ errT = 0.1 * np.ones(len(Ts))
 errR_H = np.zeros(len(Ts))
 R_Hs = - UAH * b / (IAs * B ) * 0.001 # cubic meters / coulomb
 
+#write R_Hs to csv for protocol
+with open('R_H.csv', 'wb') as csvfile:
+    R_Hwriter = csv.writer(csvfile, delimiter=' ')
+    R_Hwriter.writerow(['#T in K', '#R_H in m**3 / C'])
+    R_Hwriter.writerows(zip(Ts, R_Hs))
+
 gHallk = TGraphErrors(len(Ts), Ts, R_Hs, errT, errR_H)
 
-mg2 = TMultiGraph()
+mg = TMultiGraph()
 
-mg2.SetTitle("Hallkoeffizient / (m^3 / C) #ddot{u}ber Temperatur/K")
+mg.SetTitle("Hallkoeffizient #ddot{u}ber Temperatur;T / K;R_{H} / (m^{3} / C)")
 
 gHallk.SetMarkerStyle(kOpenCircle)
 gHallk.SetMarkerColor(kBlue)
@@ -94,15 +100,17 @@ leg.SetFillColor(0)
 leg.AddEntry(gHallk, "Messdaten")
 
 
-c2 = TCanvas( 'c1', '', 200, 10, 700, 500)
-c2.SetGrid()
+c1 = TCanvas( 'c1', '', 200, 10, 700, 500)
+c1.SetGrid()
 
 
-mg2.Add(gHallk)
-mg2.Draw("AP")
+mg.Add(gHallk)
+mg.Draw("AP")
 leg.Draw("SAME")
 
-c2.Update()
+c1.Update()
 
-raw_input()
+c1.SaveAs("A1R_h.pdf")
+
+#raw_input()
 
