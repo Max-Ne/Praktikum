@@ -108,7 +108,7 @@ Der angegebene Wert liegt bei $E_G(300K) = 0.66 .. 0.67 \ \text{eV}$
 \subsubsection{Intrinsische Ladungsträgerkonzentration bei 300K}
 \FloatBarrier
 Mit 
-$$ n_i (T) = T^{3/2} \cdot A \cdot \exp^{- \frac{E_{G,0}}{2 \cdot k_B }\cdot T}$$
+$$ n_i (T) = T^{3/2} \cdot A \cdot \exp^{- \frac{E_{G,0}}{2 \cdot k_B }cdot T}$$
 ergibt sich:
 $$n_i(300 \text{K}) = 2.4049587717810924E+18 \ \text{m}^{-3}$$
 Die Angabe liegt hier bei $n_i(300 \text{K} = 2.4 \ \text{m}^{-3}$.
