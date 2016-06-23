@@ -56,12 +56,13 @@ Der extrinsische Bereich endet mit dem Plateau im inversen Hallkoeffizienten bei
 \FloatBarrier
 \subsubsection{Leitungstyp}
 
-Der Leitungstyp von Probe A kann aus dem Vorzeichen des Hallkoeffizienten abgelesen werden. Nach Vorbereitungsmappe Gleichung (51) gilt:
+Der Leitungstyp von Probe A kann aus dem Vorzeichen des Hallkoeffizienten abgelesen werden. Nach Vorbereitungsmappe Gl.51 gilt:
 $$\vec{E}_H = - R_H (\vec{J} \times \vec{B}) $$
 Somit ist das Vorzeichen der Hallspannung umgekehrt zu dem des Hallkoeffizienten. Weiter gilt für den Hallkoeffizienten
 $$R_H = \frac{p\mu_p^{2} - n \mu _n ^{2}}{\vert e \vert (n \mu _n + p \mu _p)^{2}} $$
 Da die Beweglichkeit für Elektronen größer ist, ist der Hallkoeffizient negativ im intrinsischen Fall, also für hohe Temperaturen. Liegt ein Vorzeichenwechsel mit steigender Temperatur vor so handelt es sich um Löcherleitung, da für tiefe Temperaturen der Koeffizient für Elektronleitung negativ und Löcherleitung positiv ist. \\
 In unserem Fall sehen wir keinen Vorzeichenwechsel, woraus die bevorzugte Elektronleitung im extrinsischen Fall folgt. Der Halbleiter sollte also n-dotiert sein.
+%Elektronenleitung???
 
 \FloatBarrier
 \subsubsection{Intrinsische Ladungsträgerkonzentration}
@@ -107,7 +108,7 @@ Der angegebene Wert liegt bei $E_G(300K) = 0.66 .. 0.67 \ \text{eV}$
 \subsubsection{Intrinsische Ladungsträgerkonzentration bei 300K}
 \FloatBarrier
 Mit 
-$$ n_i (T) = T^{3/2} \cdot A \cdot \exp^{- \frac{E_{G,0}}{2 \cdot k_B }\cdot T}$$
+$$ n_i (T) = T^{3/2} \cdot A \cdot \exp^{- \frac{E_{G,0}}{2 \cdot k_B }cdot T}$$
 ergibt sich:
 $$n_i(300 \text{K}) = 2.4049587717810924E+18 \ \text{m}^{-3}$$
 Die Angabe liegt hier bei $n_i(300 \text{K} = 2.4 \ \text{m}^{-3}$.
