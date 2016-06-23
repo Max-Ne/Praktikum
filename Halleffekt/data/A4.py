@@ -9,7 +9,7 @@
 #
 # Creation Date : So 12 Jun 2016 17:47:49 CEST
 #
-# Last Modified : So 19 Jun 2016 20:47:11 CEST
+# Last Modified : Mi 22 Jun 2016 18:17:35 CEST
 #
 #####################################
 from ROOT import *
@@ -78,6 +78,18 @@ Ts = Ts + 273.15
 errU = []
 errI = []
 errT = 0.1 * np.ones(len(Ts))
+
+#convert to SI units
+l *= 1000 # m
+b *= 1000 # m
+d *= 1000 # m
+
+IAs *= 1000 # A
+UAH *= 1000 # V
+IBs *= 1000000 # A
+UBleit *= 1000 # V
+UBH *= 1000 # V
+
 
 #only look at intrinsic bit
 origlen = len(Ts)

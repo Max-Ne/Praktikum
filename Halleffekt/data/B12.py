@@ -9,7 +9,7 @@
 #
 # Creation Date : So 19 Jun 2016 20:31:25 CEST
 #
-# Last Modified : So 19 Jun 2016 21:13:08 CEST
+# Last Modified : Mi 22 Jun 2016 18:24:21 CEST
 #
 #####################################
 
@@ -29,10 +29,9 @@ d = 1. # mm
 
 #Probe B Abmessungen
 
-
-
 B = 0.5 # T
 
+k_B = 8.617330 * 10**-5 # eV / K
 
 ###entries:
 Ts = np.array([], dtype=np.float) # in degree Celsius
@@ -77,9 +76,26 @@ UBH = (UBHplus - UBHminus) / 2;
 Ts = Ts + 273.15
 TBs = Ts[:len(UBleit)]
 
+print(IBs)
+IBs = IBs / 1000.
+print(IBs)
+
 errU = []
 errI = []
 errT = 0.1 * np.ones(len(Ts))
+
+
+#convert to SI units
+l *= 1000 # m
+b *= 1000 # m
+d *= 1000 # m
+
+IAs *= 1000 # A
+UAH *= 1000 # V
+IBs *= 1000000 # A
+UBleit *= 1000 # V
+UBH *= 1000 # V
+
 
 ################################################
 
@@ -87,7 +103,7 @@ errSigma = np.zeros(len(Ts))
 errR_H = np.zeros(len(Ts))
 
 sigmas = l * IAs / (b * d * UAleit) # S / m # as should be
-R_Hs = - UAH * b / (IAs * B ) * 0.001 # cubic meters / coulomb
+R_Hs = - UAH * b / (IAs * B ) # cubic meters / coulomb
 
 sigmaBs = (np.log(2) / np.pi) * (IBs / UBleit)
 R_HBs = UBH / (IBs * B)
@@ -126,12 +142,41 @@ mg.SetTitle("Beweglichkeit: 2DEG und Volumenkristall; T / K; #mu / (1/T)")
 mg.Add(g1)
 mg.Add(g2)
 
+##########################################
+### phonon phun
+##########################################
+
+
+AcousticPhononScattering = TF1("Acoustic", "[0] * 1/x", 90, 430)
+OpticPhononScattering = TF1("Optic", "[0] * (exp([1]/x) - 1)", 90, 430)
+
+AcousticPhononScattering.SetParameter(0, 100.)
+OpticPhononScattering.SetParameter(0, 10.)
+OpticPhononScattering.SetParameter(1, 50.)
+
+mu_tot = TF1("Total", "1/(1/Optic + 1/Acoustic)", 90, 430)
+mu_tot.SetLineColor(kGreen)
+
+mu_tot.SetParameters(1000,1000,1000)
+#print(mu_tot.GetParameter(0))
+#print(mu_tot.GetParameter(1))
+#print(mu_tot.GetParameter(2))
+print("[0] = phonon[0], [1] = phonon[1], [2] = acoustic[0]")
+
+g2.Fit(mu_tot)
+
+#print(AcousticPhononScattering.GetParameter(0))
+#print(OpticPhononScattering.GetParameter(0))
+
+leg.AddEntry(mu_tot, "Fit: Phononstreuung")
+
 c1 = TCanvas( 'c1', '', 200, 10, 700, 500)
 c1.SetGrid()
 c1.SetLogy(1)
 
 mg.Draw("AP")
 leg.Draw("SAME")
+mu_tot.Draw("SAME")
 
 c1.Update()
 c1.SaveAs("B2.pdf")

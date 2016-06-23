@@ -62,6 +62,18 @@ errI = []
 errT = 0.1 * np.ones(len(Ts))
 
 
+#convert to SI units
+l *= 1000 # m
+b *= 1000 # m
+d *= 1000 # m
+
+IAs *= 1000 # A
+UAH *= 1000 # V
+IBs *= 1000000 # A
+UBleit *= 1000 # V
+UBH *= 1000 # V
+
+
 ############################
 ### calc Leitfaehigkeit sigma
 ############################

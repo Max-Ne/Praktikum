@@ -9,7 +9,7 @@
 #  *
 #  * Creation Date : So 12 Jun 2016 15:24:47 CEST
 #  *
-#  * Last Modified : So 19 Jun 2016 18:03:39 CEST
+#  * Last Modified : Mi 22 Jun 2016 18:22:30 CEST
 #  *
 #  *************************************/
 #
@@ -28,6 +28,7 @@ b = 10. # mm
 d = 1. # mm
 
 B = 0.5 # T
+
 
 ###entries:
 Ts = np.array([], dtype=np.float) # in degree Celsius
@@ -71,6 +72,20 @@ UAH = (UAHplus - UAHminus) / 2;
 UBH = (UBHplus - UBHminus) / 2;
 Ts = Ts + 273.15
 errT = 0.1 * np.ones(len(Ts))
+
+
+#convert to SI units
+l *= 1000 # m
+b *= 1000 # m
+d *= 1000 # m
+
+IAs *= 1000 # A
+UAH *= 1000 # V
+IBs *= 1000000 # A
+UBleit *= 1000 # V
+UBH *= 1000 # V
+
+
 ############################
 ### calc Hallkoeff R_H
 ############################
