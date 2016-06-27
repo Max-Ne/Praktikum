@@ -9,7 +9,7 @@
 #
 # Creation Date : Fr 17 Jun 2016 09:41:04 CEST
 #
-# Last Modified : Mi 22 Jun 2016 18:23:56 CEST
+# Last Modified : Mo 27 Jun 2016 03:21:27 CEST
 #
 #####################################
 from ROOT import *
@@ -86,7 +86,6 @@ Ts = Ts + 273.15
 
 errU = []
 errI = []
-errT = 0.1 * np.ones(len(Ts))
 
 
 ############################
@@ -95,6 +94,8 @@ errT = 0.1 * np.ones(len(Ts))
 
 origlen = len(Ts)
 Ts = np.fromiter((x for x in Ts if x > T_i), dtype = np.float)
+
+errT = 0.1 * np.ones(len(Ts))
 
 IAs = IAs[origlen-len(Ts):]
 UAleit = UAleit[origlen-len(Ts):]
@@ -105,13 +106,14 @@ b = b0 + db*Ts
 
 n = 1/(-R_Hs * e) * (1-b)/(1+b)
 errn = np.zeros(len(Ts))
-print(n)
+#errn = np.ones(len(Ts))
+#print(n)
 
-print(n/Ts**1.5)
+#print(n/Ts**1.5)
 
 #TODO oskar: tgrapherrors fucks it up for some reason
 g1 = TGraph(len(Ts), 1/Ts, np.log(n/Ts**1.5))
-#g1 = TGraphErrors(len(Ts), 1/Ts, np.log(n/Ts**1.5), errT, errn)
+#g1 = TGraphErrors(len(Ts), 1/Ts, np.log(n/Ts**1.5), 1/Ts * 1/Ts * errT, errn)
 
 g1.SetMarkerStyle(kOpenCircle)
 g1.SetMarkerColor(kBlue)
@@ -122,6 +124,7 @@ g1.SetLineColor(kBlue)
 f1 = TF1("Linear Law", "[0]+[1] * x", Ts[0], Ts[-1])
 f1.SetLineColor(kRed);
 f1.SetLineStyle(1);
+#f1.SetParameters(-4000., 48.)
 
 g1.Fit(f1)
 
@@ -150,11 +153,14 @@ c1.SaveAs("A5.pdf")
 yachs = f1.GetParameter(0)
 
 E_G0 = -2 * kB * f1.GetParameter(1) # eV
-print('E_G0 = ', E_G0)
+error = 2 * kB*5.55688
+print('E_G0 = ', E_G0, 'p/m', error)
 
 E_G300 = E_G0 - alpha * 300 # eV
 print('E_G300 = ', E_G300)
 
-
 ni300 = 300**1.5 * np.exp(yachs - E_G0 / ( 2 * kB * 300))
 print('ni300 = ', ni300)
+
+
+

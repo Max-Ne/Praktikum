@@ -75,16 +75,17 @@ Die intrinsische Ladungsträgerkonzentration kann mit Hilfe von Formel (55) best
 \end{figure}
 
 
+\FloatBarrier
 
 \subsubsection{Arrhenius}
 \FloatBarrier
 
 Aus dem Arrhenius-plot ergibt sich mit einem linearen Fit für die Bandlückenenergie und den y-Achsenabschnitt:
 %$$y = -4467.87 \cdot x + 48.6613$$
-$$\text{ln}(A) = 48.6613 \pm 0.0152968 $$
-$$ - \frac{E_{G,0}}{2 \cdot k_B} = (-4467.87 \pm 5.55688 ) \ \text{K}$$
+$$\text{ln}(A) = 48.66 \pm 0.02 $$
+$$ - \frac{E_{G,0}}{2 \cdot k_B} = (-4467.87 \pm 5.56 ) \ \text{K}$$
 und damit:
-$$E_{G,0} = 0.7695218869395287 \ \text{eV} $$
+$$E_{G,0} = 0.77 \ \text{eV} $$
 
 %y achsenabschnitt: 48.6613 +/- 0.0152968
 %steigung: -4467.87 +/-5.55688
@@ -96,21 +97,25 @@ $$E_{G,0} = 0.7695218869395287 \ \text{eV} $$
 \caption{Arrhenius plot}
 \end{figure}
 
+\pagebreak
 
 \subsubsection{Bandlücke bei 300K}
 \FloatBarrier
 Mit der Beziehung (44) aus der Vorbereitung gilt:
-$$E_G(300K) = 0.6495218869395287 \ \text{eV}$$
+$$E_G(300K) = 0.65 \ \text{eV}$$
 Der angegebene Wert liegt bei $E_G(300K) = 0.66 .. 0.67 \ \text{eV}$
+%TODO abweichung vom literaturwert diskutieren
+Die Abweichung liegt außerhalb des statistischen Fehlers des Fits und muss durch Messungenauigkeiten begründet sein.
 
 
 \subsubsection{Intrinsische Ladungsträgerkonzentration bei 300K}
 \FloatBarrier
 Mit 
-$$ n_i (T) = T^{3/2} \cdot A \cdot \exp^{- \frac{E_{G,0}}{2 \cdot k_B }\cdot T}$$
+$$ n_i (T) = T^{3/2} \cdot A \cdot \exp^{- \frac{E_{G,0}}{2 \cdot k_B \cdot T }}$$
 ergibt sich:
-$$n_i(300 \text{K}) = 2.4049587717810924E+18 \ \text{m}^{-3}$$
-Die Angabe liegt hier bei $n_i(300 \text{K} = 2.4 \ \text{m}^{-3}$.
+$$n_i(300 \text{K}) = 2.40 \cdot  10^{18}\ \text{m}^{-3}$$
+Die Angabe liegt hier bei $n_i(300 \text{K}) = 2.4 \ \cdot 10^{19}\ \text{m}^{-3}$, also eine ganze Größenordnung verschoben, was alleine durch den vergleichsweise geringen Fehler in der Energielücke nicht zu erklären ist.
+
 
 \subsection{Probe B}
 \subsubsection{Beweglichkeit}
@@ -120,8 +125,8 @@ $$\sigma = \frac{\ln 2}{\pi} \frac{I}{U_{leit}}$$
 $$R_H = \frac{U_H}{I} \frac{1}{B}$$
 Die Tabelle für die Beweglichkeit befindet sich im Anhang.
 
-\subsubsection{Vergleich: Volumenhalbleiter und 2DEG}
 \FloatBarrier
+\subsubsection{Vergleich: Volumenhalbleiter und 2DEG}
 
 Die Beweglichkeit für das 2DEG nimmt wie erwartet mit der Temperatur ab, da die Phononstreuung zunimmt. Im Volumenkristall nimmt die Beweglichkeit bei niedrigen Temperaturen zunächst zu, da die Störstellenstreuung mit der Temperatur abnimmt und dieser Effekt erst bei höheren Temperaturen durch die Phononstreuung kompensiert wird.
 
@@ -132,8 +137,18 @@ Die Beweglichkeit für das 2DEG nimmt wie erwartet mit der Temperatur ab, da die
 \caption{Bewegleichkeiten für verschiedene Proben}
 \end{figure}
 
+\pagebreak
 
-%\subsection{Phononenstreuung}
-%\FloatBarrier
+\FloatBarrier
+\subsection{Phononenstreuung}
+
+Aus dem Fit mit den gegebenen Formen für akustische und optische Phononen (siehe Anhang) ergibt sich:
+
+$$\frac{\hbar \omega_{LO}}{k_B} = (423.66  \pm 5.82)\ \text{K}$$
+und damit für die Energie des longitudinal optischen Phonons:
+$$E = 36.51 \pm 0.5\ \text{meV}$$
+Dies stimmt gut mit dem gegebenen Wert von $ 36 \ \text{meV} $ überein.
+
+
 
 

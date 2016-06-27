@@ -9,7 +9,7 @@
 #
 # Creation Date : So 19 Jun 2016 20:31:25 CEST
 #
-# Last Modified : Mi 22 Jun 2016 18:24:21 CEST
+# Last Modified : So 26 Jun 2016 22:03:40 CEST
 #
 #####################################
 
@@ -85,25 +85,13 @@ errI = []
 errT = 0.1 * np.ones(len(Ts))
 
 
-#convert to SI units
-l *= 1000 # m
-b *= 1000 # m
-d *= 1000 # m
-
-IAs *= 1000 # A
-UAH *= 1000 # V
-IBs *= 1000000 # A
-UBleit *= 1000 # V
-UBH *= 1000 # V
-
-
 ################################################
 
 errSigma = np.zeros(len(Ts))
 errR_H = np.zeros(len(Ts))
 
 sigmas = l * IAs / (b * d * UAleit) # S / m # as should be
-R_Hs = - UAH * b / (IAs * B ) # cubic meters / coulomb
+R_Hs = - UAH * b / (IAs * B ) * 0.001# cubic meters / coulomb
 
 sigmaBs = (np.log(2) / np.pi) * (IBs / UBleit)
 R_HBs = UBH / (IBs * B)
