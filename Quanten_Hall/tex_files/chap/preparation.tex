@@ -1,0 +1,38 @@
+\subsection{Theoretischer Hintergrund}
+\subsubsection{Klassischer Halleffekt}
+In einem stromduchflossenen Leiter bewegen sich Elektronen. Legt man senkrecht dazu ein B-Feld an, so erfahren diese eine Lorentz-Kraft senkrecht dazu. Im Gleichgewicht kompensieren sich die Lorentz-Kraft und das durch die Ablenkung entstehende E-Feld. Dann gilt:
+$$\vec{F_L} = - \vec{F_E} $$
+Der Hallkoeffizient ist definiert als:
+$$ R_H = \frac{E_y}{j_x \cdot B} = \frac{1}{n e}$$
+Bei endlicher Temperatur sind in Halbleitern nicht nur Elektronen sondern auch Defektelektronen, sog. Löcher, Ladungsträger. Für die Leitfähigkeit und den Hallkoeffizient gelten dann:
+$$\sigma = ne\mu _n + pe\mu_p $$
+$$R_H = \frac{p \mu _p ^{2} - n \mu _n ^{2}}{e(p\mu_p + n \mu _n)^{2}} $$
+Hier sind $n,p$ die Ladungsträgerkonzentrationen und $\mu$ die jeweilige Beweglichkeiten.
+\subsubsection{Verwendete Proben}
+Die verwendeten Proben müssen ein 2D-Elektronengas bereitstellen. Das wird zum einen durch ein Silizium-MOSFET und zum anderen durch eine GaAs-GaAlAs-Heterostruktur realisiert.\\
+
+Das Silizium-MOSFET besteht aus einem Block p-dotierten Siliziums mit einer Isolationsschicht darüber. Die Gate-Spannung $V_G$ wird angelegt an eine auf der anderen Seite befindlichen Aluminium-Schicht, sodass sich am Rand des Silizium-Blockes eine Inversionsschicht bildet, in der sich Elektronen in zwei Dimensionen bewegen können. Die Dichte der Lagundsträger kann hierbei gut über die Gate-Spannung eingestellt werden. Durchrecht starke Streuung an Störstellen ist die Beweglichkeit der Elektronen jedoch gering. \\
+
+In der GaAs-GaAlAs-Heterostruktur übernimmt die leicht p-dotierte GaAs-Schicht die Rolle des Silizium-Blockes. An der Grenze zum n-dotierten GaAlAs, das als Isolator fungiert. Durch Diffusion der überschüssigen Elektronen mit den Löchern an der Grenzfläche, werden erstere räumlich von den zugehörigen Störstellen getrennt, jedoch noch angezogen. Dadurch knnen diese sich in der Grenzfläche bewegen. 
+\subsubsection{2DEG}
+In einem 2D-Elektronengas, das wie oben beschrieben realisiert werden kann, ist eine Koordinate festgehalten. Legt man ein B-Feld senkrecht zur Stromflussrichtung an, so kommt es zum Quantenhalleffekt. Die Elektronen bewegen sich auf einer Spiralbahn senkrecht zur Oberfläche und bilden Landau-Niveaus. Diese sind entartet, sodass die Fermienergie sprunghaft steigt, wenn ein Niveau vollständig besetzt ist. Dadurch sind in der Hallspannung Plateaus mit steigendem B-Feld zu beobachten. \\
+Die Leitfähigkeit längs einer Bewegungsrichtung des 2D-Elektronengases oszilliert mit steigendem B-Feld, da das oberste Energieband zum Teil höher als die Fermienergie liegt und dadurch geleert wird. Die abgegebene Energie erhöht die Streuung der Elektronen an Störstellen, was zu einer Änderung der Leitfähigkeit führt.
+\subsubsection{Änderung der Temperatur und des Probenstromes}
+Wird die Temperatur zu stark erhöht, so ist kein Quantenhalleffekt mehr erkennbar, da die Struktur des 2DEG nicht mehr gilt und höhere Landau-Niveaus nicht besetzt werden. Die Temperatur von flüssigem Stickstoff reicht hierzu nicht aus.\\
+Bei Änderung des Probenstroms treten oben beschriebene Oszillationen der Leitfähigkeit auf.
+\subsubsection{Zeeman-Aufspaltung}
+Energieniveaus von Atomen spalten sich auf in einem Magnetfeld. Dieser Effekt ist bekannt als Zeeman-Effekt. In diesem Versuch spielt er keine Rolle. 
+\subsection{Durchführung}
+Zunächst wird der Kryostat abgekühlt. Davor wird allerdings geprüft, ob die Probe korrekt eingebaut ist, da später nicht nachjustiert werden kann. \\
+Dann werden die einzelnen Kammern in der Versuchsanordnung mit Helium gespült, bevor flüssiger Stickstoff eingefüllt wird. Der Widerstand der Spule und des Thermometers werden gemessen. \\
+Dann wird der flüssige Stickstoff entfernt und das Dewar sowie der Probenraum wieder mit Helium gefüllt. Anschließend wird der Probenraum auf ca. 2 mbar evakuiert und das Dewar erneut gespült. Danach wird der Kryostat mit Helium gefüllt. Das geschieht wieder bei einem Druck von 2,0 mbar. Die Füllhöhe wird über Schwingungen eines Messstabes ermittelt. Erreicht dieser die Oberfläche des Bades, so steigt die Frequenz. \\
+Abschließend werden der Widerstand der Spule und die Temperatur ermittelt. Die Spule sollte supraleitend sein, die Temeperatur sollte unter 4,2 K sein. Dann können die Messungen durchgeführt werden.
+\subsection{Aufgaben}
+Bei 4 K wird die Längs- und die Querspannung gemessen. \\
+Durch verdampfen von flüssigem Helium wird die Probe auf 1,8 K abgekühlt. Bei einem Probenstrom von $10 \mu A$ wird das B-Feld auf 6 T hochgefahren und dabei die Längsspannung in 0.5 T schritten gemessen. Beim Herunterfahren des B-Feldes wird die Querspannung gemessen. Anschließend werden beide Spannungen bei einem Strom von $100 \mu A$ gemessen. Dann wird die Messapparatur ausgeschalten. \\
+
+Zur Auswertung werden die Extrema der Längspannung bestimmt mit den dazugehörigen Magnetfeldstärken. \\
+Die Quer- oder Hallspannung der Plateaus wird bestimmt und diese auch identifiziert. \\
+Damit wird dann über den Hallkoeffizienten die Ladungsträgerkonzentration bestimmt, sowie die Feinstrukturkonstante $\alpha$. Nach Vorbereitungsmappe gilt hierfür:
+$$R_H = \alpha ^{-1} \mu _0 c /2i $$
+Hier ist i die Nummer des besetzten Energieniveaus. Abschließend wird noch mit Literaturwerten verglichen.
