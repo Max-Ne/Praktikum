@@ -1,0 +1,15 @@
+A) (skipped)
+    14.4 keV line selection
+
+B)
+    Spektrum von Eisen, Vacromium, FePO4, FeSO4
+    Messung Lage der Absorptionspeaks, Isomerieverschiebung
+
+C)
+    Lebensdauer des 14.4 keV Zustandes in Vacromium
+
+D)
+    inneres Magnetfeld und magnetisches Moment des angeregten Zustandes in Fe
+
+E)
+    Bestimmung des elektrischen Feldgradienten des Kristallfeldes von Eisenverbindungen

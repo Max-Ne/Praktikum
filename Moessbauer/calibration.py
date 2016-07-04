@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 from ROOT import *
 import numpy as np
 
