@@ -1,0 +1,9 @@
+theorie:
+    halbleiter
+    hall effekt wie gehabt
+
+
+durchführung:
+
+auswertung:
+    
