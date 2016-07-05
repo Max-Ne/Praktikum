@@ -9,7 +9,7 @@
 #
 # Creation Date : Di 05 Jul 2016 12:51:33 CEST
 #
-# Last Modified : Di 05 Jul 2016 16:47:41 CEST
+# Last Modified : Di 05 Jul 2016 19:01:50 CEST
 #
 #####################################
 
@@ -55,14 +55,32 @@ counts = np.array(counts[2:], dtype=float)
 #poisson
 count_err = np.sqrt(counts, dtype=float)
 
+#data point graph
 g = TGraphErrors(len(counts), vs, counts, np.zeros(len(counts)), count_err)
+g.SetTitle("Vacromium;velocity / mm/s; # Events")
 
+#fitting fun
+fit_min = -5.
+fit_max = 5.
+f = TF1("Peak", "[0]*exp(-0.5*((x-[1])/[2])^2) + [3]", fit_min, fit_max)
+f.SetParameters(-300., 0., 0.1, 1300)
+
+g.Fit("Peak", 'R')
+#legend
+l = TLegend(.6,.8,.9,.9)
+l.SetFillColor(0)
+l.AddEntry(g, "data points", "p")
+l.AddEntry(f, "fit")
+
+#draw all the shit
 c1 = TCanvas('c1', "", 200, 10, 700, 500 )
 c1.SetGrid()
 c1.cd()
 
 g.Draw("AP")
+f.Draw("SAME")
+l.Draw("SAME")
 
 c1.Update()
 
-raw_input()
+c1.SaveAs("./plots/VC.pdf")
