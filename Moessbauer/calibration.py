@@ -9,7 +9,7 @@
 #
 # Creation Date : Do 30 Jun 2016 12:48:32 CEST
 #
-# Last Modified : Di 05 Jul 2016 16:48:43 CEST
+# Last Modified : Mi 06 Jul 2016 03:00:21 CEST
 #
 #####################################
 
@@ -65,6 +65,7 @@ vs[channel_min1:channel_min2] = -vs[channel_min1:channel_min2]
 verr = (wvlen / 2) * (count_err / BZ)
 
 g = TGraphErrors(len(counts), np.array(range(len(counts)), dtype=float), vs, np.zeros(len(counts)), verr)
+g.SetTitle("Velocity calibration; channel # ; velocity / mm/s")
 
 
 c1 = TCanvas('c1', "", 200, 10, 700, 500 )

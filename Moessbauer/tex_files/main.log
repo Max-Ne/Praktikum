@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.23)  6 JUL 2016 02:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.23)  6 JUL 2016 08:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1255,30 +1255,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 52--55
 
  []
 
-[3]) (./chap/evaluation.tex) [4] (./main.aux) ) 
+[3]) (./chap/evaluation.tex
+<../plots/velocities.pdf, id=89, 569.12625pt x 387.4475pt>
+File: ../plots/velocities.pdf Graphic file (type pdf)
+
+<use ../plots/velocities.pdf>
+Package pdftex.def Info: ../plots/velocities.pdf used on input line 11.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+ [4]
+<../plots/Fe57.pdf, id=94, 569.12625pt x 387.4475pt>
+File: ../plots/Fe57.pdf Graphic file (type pdf)
+ <use ../plots/Fe57.pdf>
+Package pdftex.def Info: ../plots/Fe57.pdf used on input line 23.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+<../plots/VC.pdf, id=95, 569.12625pt x 387.4475pt>
+File: ../plots/VC.pdf Graphic file (type pdf)
+ <use ../plots/VC.pdf>
+Package pdftex.def Info: ../plots/VC.pdf used on input line 31.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+<../plots/FeSO4.pdf, id=96, 569.12625pt x 387.4475pt>
+File: ../plots/FeSO4.pdf Graphic file (type pdf)
+ <use ../plots/FeSO4.pdf>
+Package pdftex.def Info: ../plots/FeSO4.pdf used on input line 39.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+<../plots/FePO4.pdf, id=97, 569.12625pt x 387.4475pt>
+File: ../plots/FePO4.pdf Graphic file (type pdf)
+ <use ../plots/FePO4.pdf>
+Package pdftex.def Info: ../plots/FePO4.pdf used on input line 47.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+
+[5 <../plots/velocities.pdf, page is rotated 90 degrees>] [6 <../plots/Fe57.pdf
+, page is rotated 90 degrees> <../plots/VC.pdf, page is rotated 90 degrees>]
+[7 <../plots/FeSO4.pdf, page is rotated 90 degrees> <../plots/FePO4.pdf, page i
+s rotated 90 degrees>] [8]) [9] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 17168 strings out of 493029
- 331835 string characters out of 6136234
- 379746 words of memory out of 5000000
- 20506 multiletter control sequences out of 15000+600000
- 14464 words of font info for 38 fonts, out of 8000000 for 9000
+ 17226 strings out of 493029
+ 332676 string characters out of 6136234
+ 379796 words of memory out of 5000000
+ 20549 multiletter control sequences out of 15000+600000
+ 20030 words of font info for 56 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,18n,43p,10385b,436s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvip
-s/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/te
-xmf/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/publ
-ic/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440
-.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/tex
-mf/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (4 pages, 264457 bytes).
+ 38i,18n,43p,10385b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips
+/cm-super/cm-super-t1.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr1
+0.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texm
+f/fonts/type1/public/cm-super/sfbx1000.pfb></usr/share/texmf/fonts/type1/public
+/cm-super/sfbx1200.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1440.p
+fb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0600.pfb></usr/share/texmf
+/fonts/type1/public/cm-super/sfrm0700.pfb></usr/share/texmf/fonts/type1/public/
+cm-super/sfrm0800.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm1000.pf
+b>
+Output written on main.pdf (9 pages, 607350 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 87 compressed objects within 1 object stream
+ 379 PDF objects out of 1000 (max. 8388607)
+ 198 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
 
