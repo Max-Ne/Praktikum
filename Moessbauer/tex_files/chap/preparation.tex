@@ -11,21 +11,56 @@ For visible light resonance absorption is possible, while it is impossible for n
 
 In reality at finite Temperature of the samples the doppler effect increases the widths of the lines creating an overlap in emission and absorption spectra and enabling resonance absorption.\\
 
-The Mößbauer effect occurs, when certain atoms (e.g. \ce{Fe^57})are built into a crystal structure. Atoms in the lattice can emit photons creating or consuming phonons, but there is a finite propability, that the internal energy of the crystal does not change.
+The Mößbauer effect occurs, when certain atoms (e.g. \ce{Fe^57})are built into a crystal structure. Atoms in the lattice can emit photons creating or consuming phonons, but there is a finite propability, that the internal energy of the crystal does not change.\\
 
+The ratio of recoilless processes is given by the Debye-Waller-Factor:
+$$ f(T) = \exp( - \frac{p_\gamma^2}{2 M} \cdot \frac{3}{2k_B \Theta} [ 1 + \frac{2\pi^2}{3} (\frac{T}{\Theta})^2])$$
+
+where the first fraction gives the recoil the atom would receive, were it a free particle, the rest gives the expected value for the phonon spectrum in the Debye model with the Debye temperature $\Theta$.\\
+The Debye temperature of \ce{Fe^57} is $480 \ \text{K}$ and the Debye-Waller factor at room temperature is $0.7$.\\
+\subsubsection{Chemical Shift}
+Since the charge distribution of the nucleus is not pointlike, but has a radius dependant on excitation state, the coulomb interaction between nucleus and electron cloud changes the energy of the state and the transitions. The total shift is given as:
+$$\nu = \frac{2\pi c}{3E_0} Ze^2 (|\psi_A(0)|^2 - |\psi_E(0)|^2)(R_e^2 - R_g^2)$$
+Where $A$ and $E$ denote absorber and emitter and the $\psi$ are the electronic wave function at the location of the nucleus. Since the wave function depends on the chemical environment of the atom the shift is only measured, when absorber and emitter nuclei are in different types of crystal.
 
 \subsubsection{Hyperfine Structure}
+Nuclear spin in the magnetic fields caused by the electron gas gives rise to zeeman splitting such that instead of finding a single resonance absorption peak there are multiple ones depending on the inner magnetic fields and the nuclear spin of the emitting and absorbing nuclei.\\
+The \ce{Fe^57} emitter in this experiment is embedded in a crystal without inner magnetic fields in order to simplify the measurement.\\
+Zeeman splitting of the absorber is given by:
+$$\Delta E = - \frac{m}{I} \mu B$$
+with magnetic quantum number $m$, nuclear spin quantum number $I$, magnetic dipole of the spin $\mu$ and inner magnetic field $b$.\\
+For \ce{Fe^57} the ground state is split in two and the excited state in four levels. With the selection rules $\Delta m = \pm 1, 0$ there can be six different transitions.
 
 \subsubsection{Quadrupole Splitting}
+Nuclei with a spin $I$ can also have an asymeetrical charge distribuation. In an electric field gradient this gives rise to another kind of splitting:
+$$\Delta E_Q (m) = \frac{eQ}{4} \frac{\partial^2 V}{\partial z^2} \frac{3m^2 - I(I-1)}{3I^2 - I(I-1)}$$
+Since the splitting is dependant on the square of the magnetic quantum number $m$, it only occurs for $I > 1$ and for \ce{Fe^57} there are only two lines instead of four.\\
+With a given quadrupole moment, the difference between the two lines can be used to determine the field gradient.
 
-\subsubsection{Isomery Shift}
 
 \subsection{Assignments}
 
 \subsubsection{Mößbauer Spectra of different Iron Compounds}
+The emitter is accelerated to produce a periodic pattern of velocities relative to the different absorbers and the transmission spectra are measured.
 
 \subsubsection{Lifetime of $14.4 \ \text{keV}$ State in Vacromium}
 
+The lines of $\gamma$-decays like the $14.4 \ \text{keV}$ line used in this experiment are orders of magnitude too narrow, to be resolved with interferometers.
+Instead the Mößbauer effect can be used to measure the linewidth and with this the life time of the excited state.\\
+
+The \ce{Fe^57} source is moved relative to a Vacromium absorber and the transmission is measured. At a certain relative velocity resonance absorption occurs. Deviating from this velocity will quench the resonance, since the Doppler effect for small velocities gives:
+$$\Delta E_\gamma = 'frac{v}{c} E$$
+Making it possible to sample the resonance spectrum.\\
+The half width of the absorption peak is double the natural line width.\\
+
+
+The $14.4 \ \text{keV}$ line of \ce{Fe^57} has a width of $5 \cdot 10^{-9} \ \text{eV}$
+
+
 \subsubsection{Inner Magnetic Field and Magnetic Moment of the Excited State in Iron}
+Next the magnetic field and moment of iron will be measured. From the six absorption peaks one of the four cases for the relations outlined in V9 2.4.1 has to be selected.
 
 \subsubsection{Electric Field Gradient in Iron Compounds}
+The gradient can be determined from the distance in velocity of the two peaks:
+$$\Delta v = \frac{eQ}{2} \frac{\partial^2V}{/partial z^2} \frac{c}{E_0}$$
+
