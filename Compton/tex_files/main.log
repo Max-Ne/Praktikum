@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  20 JUN 2016 00:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2014.8.22)  11 JUL 2016 01:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -841,18 +841,18 @@ Package: listings 2013/08/26 1.5b (Carsten Heinz)
  (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 24.
-LaTeX Font Info:    ... okay on input line 24.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
 Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
@@ -982,12 +982,12 @@ e
 \AtBeginShipoutBox=\box55
 \c@lstlisting=\count167
 \c__siunitx_mathsf_int=\count168
-LaTeX Font Info:    Try loading font information for U+msa on input line 24.
+LaTeX Font Info:    Try loading font information for U+msa on input line 25.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 24.
+LaTeX Font Info:    Try loading font information for U+msb on input line 25.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1019,57 +1019,73 @@ File: ./../plots/calibration/lin_fit.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./../plots/calibration/lin_fit.pdf used on input line 
 36.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- [5 <./../plots/calibration/lin_fit.pdf, page is rotated 90 degrees>] [6]
-<./../plots/50_deg.pdf, id=121, 569.12625pt x 387.4475pt>
-File: ./../plots/50_deg.pdf Graphic file (type pdf)
-
-<use ./../plots/50_deg.pdf>
-Package pdftex.def Info: ./../plots/50_deg.pdf used on input line 89.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
- [7 <./../plots/50_deg.pdf, page is rotated 90 degrees>] <./../plots/inv_el_mas
-s.pdf, id=169, 569.12625pt x 387.4475pt>
-File: ./../plots/inv_el_mass.pdf Graphic file (type pdf)
-
-<use ./../plots/inv_el_mass.pdf>
-Package pdftex.def Info: ./../plots/inv_el_mass.pdf used on input line 97.
-(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 105--110
+ [5 <./../plots/calibration/lin_fit.pdf, page is rotated 90 degrees>]
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-[8 <./../plots/inv_el_mass.pdf, page is rotated 90 degrees>]
-<./../plots/part_c.pdf, id=216, 569.12625pt x 387.4475pt>
+[6] <./../plots/xs.pdf, id=121, 569.12625pt x 385.44pt>
+File: ./../plots/xs.pdf Graphic file (type pdf)
+
+<use ./../plots/xs.pdf>
+Package pdftex.def Info: ./../plots/xs.pdf used on input line 62.
+(pdftex.def)             Requested size: 284.56242pt x 192.71953pt.
+
+Overfull \hbox (10.89407pt too wide) in paragraph at lines 70--85
+ [][] 
+ []
+
+[7 <./../plots/xs.pdf, page is rotated 90 degrees>]
+<./../plots/50_deg.pdf, id=169, 569.12625pt x 385.44pt>
+File: ./../plots/50_deg.pdf Graphic file (type pdf)
+
+<use ./../plots/50_deg.pdf>
+Package pdftex.def Info: ./../plots/50_deg.pdf used on input line 102.
+(pdftex.def)             Requested size: 284.56242pt x 192.71953pt.
+ [8 <./../plots/50_deg.pdf, page is rotated 90 degrees>] [9] <./../plots/inv_el
+_mass.pdf, id=219, 569.12625pt x 385.44pt>
+File: ./../plots/inv_el_mass.pdf Graphic file (type pdf)
+
+<use ./../plots/inv_el_mass.pdf>
+Package pdftex.def Info: ./../plots/inv_el_mass.pdf used on input line 151.
+(pdftex.def)             Requested size: 284.56242pt x 192.71953pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 159--164
+
+ []
+
+[10 <./../plots/inv_el_mass.pdf, page is rotated 90 degrees>]
+<./../plots/part_c.pdf, id=267, 569.12625pt x 387.4475pt>
 File: ./../plots/part_c.pdf Graphic file (type pdf)
 
 <use ./../plots/part_c.pdf>
-Package pdftex.def Info: ./../plots/part_c.pdf used on input line 132.
+Package pdftex.def Info: ./../plots/part_c.pdf used on input line 186.
 (pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
-) [9 <./../plots/part_c.pdf, page is rotated 90 degrees>] (./main.aux) ) 
+ [11 <./../plots/part_c.pdf, page is rotated 90 degrees>]) [12] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 14101 strings out of 494935
- 273946 string characters out of 6178122
- 301540 words of memory out of 5000000
- 17108 multiletter control sequences out of 15000+600000
+ 14106 strings out of 494935
+ 274039 string characters out of 6178122
+ 303540 words of memory out of 5000000
+ 17112 multiletter control sequences out of 15000+600000
  11370 words of font info for 34 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  39i,11n,39p,10426b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home
-/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home/ubunt
-uuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubuntuuser/
-.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/.texmf
--var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (9 pages, 213369 bytes).
+ 
+</home/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.600pk> </home
+/ubuntuuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1000.600pk> </home/ubunt
+uuser/.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600pk> </home/ubuntuuser/
+.texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1440.600pk></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (12 pages, 232920 bytes).
 PDF statistics:
- 453 PDF objects out of 1000 (max. 8388607)
- 152 compressed objects within 2 object streams
+ 508 PDF objects out of 1000 (max. 8388607)
+ 176 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 
