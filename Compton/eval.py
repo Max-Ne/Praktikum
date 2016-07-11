@@ -33,6 +33,8 @@ Phi_err = Phi_Null_err * (2**(-(Delta_T/T_Half)))		# 1/(cm**2 s)
 
 n = L/A_AL * Z_AL * rho_AL * np.pi * (d_target/2.)*(d_target/2.) * l_target	# 1
 
+print n
+print Delta_Omega
 
 ####################
 # GET DATA -> LOOP
@@ -131,7 +133,7 @@ for i in range(9):
   R_err[i] = np.sqrt(sum(y_err[i]**2))
   
   dif_xsec[i] = float(R[i])/Delta_Omega * 1./(Phi * n * t) * eps_inv * (10**25)
-  #units		1  /     1	  1./(cm**-2 s**-1 * s) * 1		= cm**(-1) * 10**25
+  #units		1  /     1	  1./(cm**-2 s**-1 * s) * 1		= cm**(2) * 10**25
   #error on: R, Phi, eps_inv
 
   dif_xsec_err[i] = np.sqrt( (dif_xsec[i]/R[i]*R_err[i])**2 + (dif_xsec[i]/Phi * Phi_err)**2 + (dif_xsec[i]/eps_inv * eps_inv_err)**2 )
@@ -157,9 +159,15 @@ g_xs.SetMarkerStyle(kOpenCircle)
 g_xs.SetMarkerColor(kBlue)
 g_xs.SetLineColor(kBlue);
 
+g_xs.GetXaxis().SetLabelSize(0)
+g_xs.GetYaxis().SetLabelSize(0)
+g_xs.GetYaxis().SetRangeUser(0.1,0.75)
+g_xs.SetTitle("Differential Cross Section; #theta in #circ; #frac{d#sigma}{d#Omega} * {10}^{25} cm^{-2}")
+
 g_xs_th.SetMarkerStyle(kOpenCircle)
 g_xs_th.SetMarkerColor(kRed)
 g_xs_th.SetLineColor(kRed);
+
 
 mg = TMultiGraph()
 
@@ -167,16 +175,17 @@ leg_xs = TLegend(.6,.8,.9,.9,"");
 leg_xs.SetFillColor(0);
 g_xs.SetFillColor(0);
 g_xs_th.SetFillColor(0);
-leg_xs.AddEntry(g_xs,"measured xsec");
-leg_xs.AddEntry(g_xs_th,"theoretical xsec");
+leg_xs.AddEntry(g_xs,"measured xsec", "AP");
+leg_xs.AddEntry(g_xs_th,"theoretical xsec", "APL");
 
    
 mg.SetTitle("Differential Cross Section; #theta in #circ; #frac{d#sigma}{d#Omega} * {10}^{25} cm^{-2}")
 
-mg.Add(g_xs)
+mg.Add(g_xs, "APY+")
 mg.Add(g_xs_th)
 
-mg.Draw("APL")
+
+mg.Draw("APLY+")
 leg_xs.Draw("SAME")
 
 c_xs.Update()
@@ -189,7 +198,7 @@ c_xs.SaveAs("./plots/xs.pdf")
 ############
 # PART II - ENERGY SHIFT
 ############
-#1. MAKE 10 PLOTS WITH GAUS FITS AND EXTRACT CHANNELS
+#1. MAKE 9 PLOTS WITH GAUS FITS AND EXTRACT CHANNELS
 fit_min = [226,209,183,161,131,114,97,81,77]
 fit_max = [301,278,250,214,196,172,144,130,111]
 
@@ -243,6 +252,7 @@ energies = calib_inters + calib_slope*channels
 #energies_err = np.sqrt(channels_err**2 + calib_inters_err**2 + (channels - calib_inters)**2 * (calib_slope_err / calib_slope)**2) / calib_slope
 energies_err = np.sqrt(calib_inters_err**2 + (channels*calib_slope_err)**2 + (channels_err*calib_slope)**2)
 
+print 'channels, channels_err, energies, energies_err'
 print channels
 print channels_err
 print energies
@@ -267,7 +277,8 @@ graph_2.SetLineColor(kBlue);
 graph_2.GetYaxis().SetNdivisions(502)
 
 # fit function
-f_lin = TF1("Linear Law","[0]+x*[1]")
+#f_lin = TF1("Linear Law","[0]+x*[1]")
+f_lin = TF1("Linear Law","0.0016611295681063123+[0]*x")
 f_lin.SetLineColor(kRed);
 f_lin.SetLineStyle(1);
 
@@ -288,12 +299,14 @@ graph_2.Draw("AP")
 last_leg.Draw("SAME")
 
 c2.Update()
-c2.SaveAs("./plots/inv_el_mass.pdf")
+c2.SaveAs("./plots/inv_el_mass_fix.pdf")
 
-inters = f_lin.GetParameter(0)
-inters_err = f_lin.GetParError(0)
-slope = f_lin.GetParameter(1)
-slope_err = f_lin.GetParError(1)
+#inters = f_lin.GetParameter(0)
+#inters_err = f_lin.GetParError(0)
+#slope = f_lin.GetParameter(1)
+#slope_err = f_lin.GetParError(1)
+slope = f_lin.GetParameter(0)
+slope_err = f_lin.GetParError(0)
 #print inters, inters_err, slope, slope_err 
 
 inv_el_mass = 1./slope
