@@ -9,7 +9,7 @@
 #
 # Creation Date : Sa 16 Jul 2016 19:14:31 CEST
 #
-# Last Modified : Mo 18 Jul 2016 00:08:16 CEST
+# Last Modified : Mo 18 Jul 2016 00:35:06 CEST
 #
 #####################################
 
@@ -62,7 +62,7 @@ with open("data/index.txt", 'r') as indexf:
             filename = "plots/" + plotname + ".pdf"
             filenames.append(filename)
 
-            g.SetTitle(plotname[:4] + " mit T = " + str(T) + " K und I = " + str(I) + "muA;B / T;" + plotname[:4] + " / " + U_unit)
+            g.SetTitle(plotname[:4] + " mit T = " + str(T) + " K und I = " + str(int(I)) + " #mu A;B / T;" + plotname[:4] + " / " + U_unit)
             gs.append(g)
 
 
@@ -164,7 +164,7 @@ print(Udirections)
 
 fit_minss = [[2., 4.],[1.6, 3.], [2.2, 4.], [1.6, 3.2], [1.4, 2.3, 3.7], [2.1, 4.], [2.2, 4.2]]
 
-fit_maxss = [[2.7, 5.3], [2.1, 3.7], [2.4, 5.2], [2.05, 3.7], [1.6, 2.7, 5.5], [2.3, 5.3], [2.7, 4.6]]
+fit_maxss = [[2.7, 5.3], [2.1, 3.7], [2.4, 5.2], [2.1, 3.7], [1.6, 2.7, 5.5], [2.3, 5.3], [2.7, 4.6]]
 
 initvals = [[0.13, 0.27], [0.025, 0.05], [0.7, 1.3], [0.11, 0.2], [0.1, 0.14, 0.26], [0.65, 1.3]]
 
@@ -177,7 +177,8 @@ for i,g in enumerate(gs):
 
     fs = []
     if Udirections[i] == "U_26":
-        fitstr = "[0]*exp(-0.5*((x-[1])/[2])^2) + [3]"
+#        fitstr = "[0]*exp(-0.5*((x-[1])/[2])^2) + [3]"
+        fitstr = "[0]*exp(-0.5*((x-[1])/[2])^2)"
     elif Udirections[i] == "U_34":
         fitstr = "[0]"
        
@@ -185,12 +186,21 @@ for i,g in enumerate(gs):
         fs.append(TF1("Fit" + str(i+1), fitstr, fit_minss[i][j], fit_maxss[i][j]))
 #    for j in range(nfits):
         if Udirections[i] == "U_26":
-            fs[j].SetParameters(0.01, (fit_minss[i][j] + fit_maxss[i][j])/2, 0.5, 0.1)
+#            fs[j].SetParameters(0.01, (fit_minss[i][j] + fit_maxss[i][j])/2, 0.5, 0.1)
+            fs[j].SetParameters(0.01, (fit_minss[i][j] + fit_maxss[i][j])/2, 0.5)
         elif Udirections[i] == "U_34":
             fs[j].SetParameter(0, initvals[i][j])
 
 #    for j in range(nfits):
         gs[i].Fit("Fit" + str(i+1), 'R')
+
+        print("======================")
+        if Udirections[i] == "U_26":
+            print(fs[j].GetParameter(1))
+            print(fs[j].Eval(fs[j].GetParameter(1)))
+        elif Udirections[i] == "U_34":
+            print(fs[j].GetParameter(0))
+        print("======================")
 
     c1 = TCanvas("c1", "", 200, 10, 700, 500 )
     c1.SetGrid()
