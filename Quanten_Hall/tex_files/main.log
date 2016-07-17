@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.23)  17 JUL 2016 19:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2016.6.23)  18 JUL 2016 00:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,71 +1205,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 31--33
  []
 
 [2]) (./chap/evaluation.tex
-<../plots/U_26_20muA_4400mK.pdf, id=18, 578.16pt x 433.62pt>
+<../plots/U_26_20muA_4400mK.pdf, id=18, 569.12625pt x 387.4475pt>
 File: ../plots/U_26_20muA_4400mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_26_20muA_4400mK.pdf>
 Package pdftex.def Info: ../plots/U_26_20muA_4400mK.pdf used on input line 10.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
 
-<../plots/U_26_100muA_4400mK.pdf, id=19, 578.16pt x 433.62pt>
+<../plots/U_26_100muA_4400mK.pdf, id=19, 569.12625pt x 387.4475pt>
 File: ../plots/U_26_100muA_4400mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_26_100muA_4400mK.pdf>
 Package pdftex.def Info: ../plots/U_26_100muA_4400mK.pdf used on input line 18.
 
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
 
-<../plots/U_26_100muA_2950mK.pdf, id=20, 578.16pt x 433.62pt>
+<../plots/U_26_100muA_2950mK.pdf, id=20, 569.12625pt x 387.4475pt>
 File: ../plots/U_26_100muA_2950mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_26_100muA_2950mK.pdf>
 Package pdftex.def Info: ../plots/U_26_100muA_2950mK.pdf used on input line 35.
 
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
 
-<../plots/U_34_20muA_4100mK.pdf, id=21, 578.16pt x 433.62pt>
+<../plots/U_34_20muA_4100mK.pdf, id=21, 569.12625pt x 387.4475pt>
 File: ../plots/U_34_20muA_4100mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_34_20muA_4100mK.pdf>
 Package pdftex.def Info: ../plots/U_34_20muA_4100mK.pdf used on input line 44.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
 
-<../plots/U_34_100muA_4400mK.pdf, id=22, 578.16pt x 433.62pt>
+<../plots/U_34_100muA_4400mK.pdf, id=22, 569.12625pt x 387.4475pt>
 File: ../plots/U_34_100muA_4400mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_34_100muA_4400mK.pdf>
 Package pdftex.def Info: ../plots/U_34_100muA_4400mK.pdf used on input line 52.
 
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
 
-<../plots/U_34_20muA_2730mK.pdf, id=23, 578.16pt x 433.62pt>
+<../plots/U_34_20muA_2730mK.pdf, id=23, 569.12625pt x 387.4475pt>
 File: ../plots/U_34_20muA_2730mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_34_20muA_2730mK.pdf>
 Package pdftex.def Info: ../plots/U_34_20muA_2730mK.pdf used on input line 60.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
 
-<../plots/U_34_100muA_2830mK.pdf, id=24, 578.16pt x 433.62pt>
+<../plots/U_34_100muA_2830mK.pdf, id=24, 569.12625pt x 387.4475pt>
 File: ../plots/U_34_100muA_2830mK.pdf Graphic file (type pdf)
 
 <use ../plots/U_34_100muA_2830mK.pdf>
 Package pdftex.def Info: ../plots/U_34_100muA_2830mK.pdf used on input line 68.
 
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
- [3] [4 <../plots/U_26_20muA_4400mK.pdf> <../plots/U_26_100muA_4400mK.pdf
-
-pdfTeX warning: pdflatex (file ../plots/U_26_100muA_4400mK.pdf): PDF inclusion:
- multiple pdfs with page group included in a single page
->] [5 <../plots/U_26_100muA_2950mK.pdf> <../plots/U_34_20muA_4100mK.pdf
-
-pdfTeX warning: pdflatex (file ../plots/U_34_20muA_4100mK.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->] [6 <../plots/U_34_100muA_4400mK.pdf> <../plots/U_34_20muA_2730mK.pdf
-
-pdfTeX warning: pdflatex (file ../plots/U_34_20muA_2730mK.pdf): PDF inclusion: 
-multiple pdfs with page group included in a single page
->]) [7 <../plots/U_34_100muA_2830mK.pdf>] (./main.aux)
+(pdftex.def)             Requested size: 284.56242pt x 193.72327pt.
+ [3] [4 <../plots/U_26_20muA_4400mK.pdf, page is rotated 90 degrees> <../plots/
+U_26_100muA_4400mK.pdf, page is rotated 90 degrees>] [5 <../plots/U_26_100muA_2
+950mK.pdf, page is rotated 90 degrees> <../plots/U_34_20muA_4100mK.pdf, page is
+ rotated 90 degrees>] [6 <../plots/U_34_100muA_4400mK.pdf, page is rotated 90 d
+egrees> <../plots/U_34_20muA_2730mK.pdf, page is rotated 90 degrees>]) [7 <../p
+lots/U_34_100muA_2830mK.pdf, page is rotated 90 degrees>] (./main.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
@@ -1292,10 +1285,10 @@ sfonts/cm/cmsy7.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfbx1000.pfb>
 </usr/share/texmf/fonts/type1/public/cm-super/sfbx1200.pfb></usr/share/texmf/fo
 nts/type1/public/cm-super/sfbx1440.pfb></usr/share/texmf/fonts/type1/public/cm-
 super/sfrm1000.pfb>
-Output written on main.pdf (7 pages, 184877 bytes).
+Output written on main.pdf (7 pages, 256181 bytes).
 PDF statistics:
- 236 PDF objects out of 1000 (max. 8388607)
- 88 compressed objects within 1 object stream
+ 378 PDF objects out of 1000 (max. 8388607)
+ 175 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  36 words of extra memory for PDF output out of 10000 (max. 10000000)
 
