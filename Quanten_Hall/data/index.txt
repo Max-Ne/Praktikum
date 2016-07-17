@@ -3,11 +3,13 @@
 R_T = 2.7
 T = 4.1
 I = 20
-#20160704_104434.bin
-B = 20160704_104434.bin.dat
 
-#20160704_104508.bin
-U_26 = 20160704_104508.bin.dat
+### first measurement has wrong  scale and thus too large disretization error
+##20160704_104434.bin
+#B = 20160704_104434.bin.dat
+#
+##20160704_104508.bin
+#U_26 = 20160704_104508.bin.dat
 
 #20160704_110246.bin
 U_34 = 20160704_110246.bin.dat
