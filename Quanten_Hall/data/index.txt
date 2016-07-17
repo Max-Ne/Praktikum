@@ -4,7 +4,7 @@ R_T = 2.7
 T = 4.1
 I = 20
 
-### first measurement has wrong  scale and thus too large disretization error
+### first measurement has wrong  scale and thus too large discretization error
 ##20160704_104434.bin
 #B = 20160704_104434.bin.dat
 #
@@ -76,5 +76,7 @@ T = 2.95
 B = 20160704_130527.bin.dat
 #20160704_130545.bin
 U_26 = 20160704_130545.bin.dat
+
+#T > quench temp
 
 #
