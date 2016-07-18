@@ -14,7 +14,7 @@ Für die Längsspannung wurden die Kurven, die in Abb.2-4 zu sehen sind, aufgeno
 \vspace*{0.5cm}
 \begin{tabular}{cccc}
 \hline
-Stromstärke in $\mu A$ & Temperatur in $K$ & B in $T$ & U in $V$ \\
+Stromstärke in $\mathrm{\mu A}$ & Temperatur in $\mathrm{K}$ & $B$ in $\mathrm{T}$ & $U$ in $\mathrm{V}$ \\
 \hline
 \hline
 20  & 4.4  & $1.831 \pm 0.004$ & 0.021 \\
@@ -84,7 +84,7 @@ Wie in der Vorbereitung beschrieben, sind in der Hallspannung Plateaus zu sehen.
 \vspace*{0.5cm}
 \begin{tabular}{ccccc}
 \hline
-Stromstärke in $\mu A$ & Temperatur in $K$ & B in $T$ & $U_H$ in $V$ & Füllfaktor i\\
+Stromstärke in $\mathrm{\mu A}$ & Temperatur in $\mathrm{K}$ & B in $\mathrm{T}$ & $U_H$ in $\mathrm{V}$ & Füllfaktor i\\
 \hline
 \hline
 20 & 2.73  & 1.4 ... 1.6 & $(8.418 \pm 0.026) \cdot 10^{-2}$ & 6\\
@@ -158,23 +158,50 @@ mit der Hallspannung $U_H$, dem angelegten Strom I und dem Füllfaktor i. In obi
 \subsubsection{Ladungsträgerkonzentration}
 Die Flächenladungsträgerdichte $n_s$ eines 2DEG wird berechnet aus
 $$U_H = \frac{B}{n_s \cdot e} \cdot I $$
-Sie ist quantisiert und abhängig von dem jeweiligen Hall-Plateau.
+Sie ist quantisiert und abhängig von dem jeweiligen Hall-Plateau. Zur Berechnung wird jeweils das Magnetfeld am Maximum in der Längsspannung genommen. Mit dem Entartungsgrad $N$ hängt sie über $n_s = i \cdot N$ zusammen. \\
+Da wir für $I = 20 \mathrm{mu A}$ bei $T = 2.73 \mathrm{K}$ keine Längsspannung aufgenommen haben, nehmen wir hier den Beginn des Hall-Plateaus. \\
+In Abb.10 ist $n_s$ für jedes Plateau aufgelistet. Die Reihenfolge ist dieselbe wie in Abb.5. Für die Fehlerrechnung wird für die Spannung die Abweichung aus dem Fit genommen. Für die Stromstärke wird ein verschwindender Fehler angenommen, da sie mit dem vorliegenden Gerät in diesem Bereich sehr genau eingestellt werden kann. \\
+
+\begin{figure}
+\centering
+\caption{Flächenladungsträgerdichte $n_s$ für jedes Hall-Plateau.}
+\vspace*{0.5cm}
+\begin{tabular}{ccccc}
+\hline
+$I$ in $\mathrm{\mu A}$ & $T$ in $\mathrm{K}$ & $B$ in $\mathrm{T}$ & $U_H$ in $\mathrm{V}$ & $n_s$ in $10^{11} \ \mathrm{cm^{-2}}$ \\
+\hline
+\hline
+20 & 2.73  & 1.4 & $(8.418 \pm 0.026) \cdot 10^{-2}$ & $2.076 \pm 0.006$\\
+	&		& 2.3 & $(1.369 \pm 0.002) \cdot 10^{-1}$ & $2.097 \pm 0.003$	\\
+	&		& 3.7 & $(2.584 \pm 0.0008) \cdot 10^{-1}$ & $1.787 \pm 0.0006$ \\
+20  & 4.1  & $1.831 \pm 0.004$ & $(1.315 \pm 0.003) \cdot 10^{-1}$ & $1.738 \pm 0.008$\\
+	&		& $3.292 \pm 0.004$ & $(2.636 \pm 0.002) \cdot 10^{-1}$ & $1.559 \pm 0.003$\\
+100	& 2.83	& $2.369 \pm 0.007$ & $(6.459 \pm 0.009) \cdot 10^{-1}$ & $2.289 \pm 0.010$\\
+	&		& $4.406 \pm 0.006$ & $1.306 \pm 0.0003$ & $2.106 \pm 0.003$\\
+100 & 4.4  & $1.855 \pm 0.004$ & $(6.565 \pm 0.012) \cdot 10^{-1}$ & $1.764 \pm 0.007$\\
+	&		& $3.455 \pm 0.003$ & $1.303 \pm 0.0003$ & $1.655 \pm 0.002$ \\
+\hline
+
+\end{tabular}
+
+\end{figure}
 
 \subsection{Feinstrukturkonstante}
 Die Feinstrukturkonstante wird wie in der Vorbereitung erwähnt berechnet durch folgende Gleichung:
 $$\frac{U_H}{I} = \alpha ^{-1} \cdot \mu _0 c / (2 \cdot i) $$
 Zur Berechnung der Messunsicherheit wird für die Hallspannung $U_H$ obige Wert aus den Fits verwendet. Die Stromstärke ist mit dem verwendeten Gerät in diesem Bereich sehr genau einstellbar, weswegen die Messunsicherheit darauf vernachlässigt wird. \\
-Für die magnetische Feldkonstante und die Lichtgeschwindigkeit werden die Werte aus der Vorbereitungsmappe verwendet:
-$$\mu _0 = 4 \pi \cdot 10^{7} \ NA^{-2} $$
-$$c = 299792 \ \frac{m}{s} $$
-Damit wird für jedes Hall-Plateau ein Wert für $\alpha$ berechnet und in einen Graphen eingetragen. Das ist in Abb.10 zu sehen. Es wurde noch eine Ausgleichsgerade gefittet und der theoretische Wert von $\alpha _{theo} = \frac{1}{137} \approx 7.299 \cdot 10^{-3}$ eingezeichnet. Die Feinstrukturkonstante haben wir somit bestimmt zu:
+Für die magnetische Feldkonstante und die Lichtgeschwindigkeit werden die Werte aus der Vorbereitungsmappe Anhang 4 verwendet:
+$$\mu _0 = 4 \pi \cdot 10^{7} \ \mathrm{NA^{-2}} $$
+$$c = 299792458 \ \mathrm{\frac{m}{s}} $$
+Damit wird für jedes Hall-Plateau ein Wert für $\alpha$ berechnet und in einen Graphen eingetragen. Das ist in Abb.11 zu sehen. Es wurde noch eine Ausgleichsgerade gefittet und der theoretische Wert von $\alpha _{theo} = \frac{1}{137} \approx 7.299 \cdot 10^{-3}$ eingezeichnet. Die Feinstrukturkonstante haben wir somit bestimmt zu:
 $$\alpha = (7.228 \pm 0.001) \cdot 10^{-3}$$
 
-\begin{figure}
+\begin{figure}[h]
 \centering
-\includegraphics[scale=0.5]{../plots/alpha.pdf}
+\includegraphics[scale=0.45]{../plots/alpha.pdf}
 \caption{Feinstrukturkonstante $\alpha$ für jedes Plateau und horizontaler Fit. Gestrichelt ist der theoretische Wert von ungefähr $\frac{1}{137}$ eingezeichnet. Die Nummerierung ist analog zu Abb.5. Oberster Eintrag in der Tabelle entspricht dem Wert mit der kleinsten Nummerierung.}
 \end{figure}
+
 
 \subsection{Literaturvergleich}
 Der theoretische Wert der Feinstrukturkonstanten liegt mehr als eine Standardabweichung von unserem Ergebnis entfernt. Die relative Abweichung ist allerdings sehr gering. Da die Feinstrukturkonstante keine wirkliche Konstante ist und ihren Wert von dem betrachteten Energiebereich ändert und da der Wert von $\frac{1}{137}$ nur eine ungefähre Angabe ist, ist das Ergebnis zufriedenstellend.
