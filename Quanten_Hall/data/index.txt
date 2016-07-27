@@ -77,6 +77,15 @@ B = 20160704_130527.bin.dat
 #20160704_130545.bin
 U_26 = 20160704_130545.bin.dat
 
+R = blablabla, keine Ahnung
+T = 2.80
+I = 20
+
+#20160613_124133.bin.dat
+B = 20160613_124133.bin.dat
+#20160613_124148.bin.dat
+U_26 = 20160613_124148.bin.dat
+
 #T > quench temp
 
 #
